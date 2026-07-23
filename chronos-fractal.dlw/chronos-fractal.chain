@@ -1,0 +1,9 @@
+ROOT0-DLW-CHAIN-v1
+index : 1485
+slug  : chronos-fractal
+seal  : 2839b65c2d6a0917519be1df017a5f0d2dfb8a514cd646349a803c8f73a08728
+prev  : 9bbb2464d713ef6e5d4adb49d638effa45370d6d28f15270dc333cd347a439d1
+link  : 0e1bd2febe9cee5f2fd1d0fe0d8e46708b9a39bf6ab2a7796d4b241513ac0a4d
+head  : 0e1bd2febe9cee5f2fd1d0fe0d8e46708b9a39bf6ab2a7796d4b241513ac0a4d
+
+— the tether: link = sha256(index|slug|seal|prev). the chain head commits to the whole corpus.
