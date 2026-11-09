@@ -1,0 +1,55 @@
+{
+  "boundary": 223,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 23,
+  "checks_total": 23,
+  "assumptions": {
+    "epsilon": 0.01025,
+    "levels": 5,
+    "chrome_wheels": 4,
+    "address_options_per_wheel": 5760,
+    "model": "SU(2) commutator toy connection",
+    "claim_scope": "mathematical only"
+  },
+  "levels": [
+    {
+      "k": 0,
+      "L": 1,
+      "K_base": 0.5,
+      "K_plus": 0.499041564,
+      "K_minus": 0.500950106
+    },
+    {
+      "k": 1,
+      "L": 0.5,
+      "K_base": 0.535898385,
+      "K_plus": 0.535644999,
+      "K_minus": 0.536149282
+    },
+    {
+      "k": 2,
+      "L": 0.25,
+      "K_base": 0.545186779,
+      "K_plus": 0.545122547,
+      "K_minus": 0.545250362
+    },
+    {
+      "k": 3,
+      "L": 0.125,
+      "K_base": 0.547528872,
+      "K_plus": 0.547512758,
+      "K_minus": 0.547544822
+    },
+    {
+      "k": 4,
+      "L": 0.0625,
+      "K_base": 0.548115651,
+      "K_plus": 0.548111619,
+      "K_minus": 0.548119642
+    }
+  ],
+  "fault_unitarity_error": 0.017671809350705673,
+  "mathematical_limit": 0.5483113556160755,
+  "note": "Symmetric plus/minus percent shifts are not inverses. Use multiply by 1+epsilon then divide by 1+epsilon."
+}
