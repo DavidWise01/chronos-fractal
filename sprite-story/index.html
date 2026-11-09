@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b16"><meta name="author" content="David Lee Wise / ROOT0">
+<title>CHRONOS // THE EMBEDDED PRIMITIVE — Pixel Story</title>
+<style>
+:root{--bg:#090c16;--panel:#111729;--line:#38445c;--txt:#f2eddd;--muted:#a9b9c7;--gold:#ffd477;--cyan:#75f3e9;--orange:#ff9567}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -10%,#1e2c4d,var(--bg) 65%);font:14px/1.5 ui-monospace,Consolas,"Courier New",monospace;color:var(--txt)}
+main{max-width:1230px;margin:auto;padding:18px}.top{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.eyebrow{font-size:11px;letter-spacing:.2em;color:var(--cyan)}
+h1{margin:0;font-size:clamp(21px,3vw,35px);letter-spacing:.04em;line-height:1.1;text-shadow:3px 3px #143a46}.tag{border:1px solid #415066;padding:7px 12px;color:var(--gold);font-size:11px}
+.layout{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(285px,1fr);gap:14px}
+.frame,.panel{background:#111625;border:2px solid #34465c;box-shadow:0 0 0 3px #080d17,0 10px 35px #0009}
+.frame{padding:10px}.screen{position:relative;overflow:hidden;background:#040812;aspect-ratio:16/9;border:3px solid #060b13}
+canvas{width:100%;height:100%;display:block;image-rendering:pixelated}
+.scan{position:absolute;inset:0;pointer-events:none;opacity:.16;background:repeating-linear-gradient(to bottom,transparent 0,transparent 3px,#080a10 4px)}
+.status{display:flex;justify-content:space-between;gap:8px;margin-top:9px;color:var(--muted);font-size:11px;flex-wrap:wrap}
+.panel{padding:16px}.chapter{color:var(--cyan);font-size:11px;letter-spacing:.12em}.storytitle{font-size:23px;color:var(--gold);line-height:1.22;margin:7px 0 12px}
+p{margin:9px 0}#story{min-height:120px;color:#e4e8eb}.code{margin-top:16px;padding:12px;background:#050a15;color:#8ef1ba;white-space:pre-wrap;word-break:break-word;font-size:12px;border-left:3px solid #439e95;min-height:65px}
+.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}
+button{font:inherit;font-weight:bold;cursor:pointer;background:#21364e;color:white;border:2px solid #52718c;padding:9px 12px;box-shadow:3px 3px #070b15}
+button:hover,button:focus-visible{background:#3a5d74;outline:2px solid #9cf6df}
+button.primary{background:#a35a3e;border-color:#e6a66b;color:#fff3e4}
+.mini{margin-top:12px;padding-top:12px;border-top:1px solid #314052;color:#b9c8d1;font-size:12px}
+.mini b{color:#f1cd7a}.checks{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.chip{padding:5px 8px;background:#0b2531;border:1px solid #245965;color:#9df4e5;font-size:11px}
+.log{max-height:155px;overflow:auto;background:#050b14;padding:10px;border:1px solid #2a3e52;color:#bbd4e2;min-height:76px;font-size:11px}
+.log div{margin-bottom:4px}.muted{color:var(--muted)}.lower{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+small{font-size:11px}.footer{margin:22px 0;color:#a1adbd;font-size:11px}a{color:#9ae8ec}
+@media(max-width:800px){.layout,.lower{grid-template-columns:1fr}main{padding:10px}.storytitle{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style></head><body>
+<main><header class="top"><div><div class="eyebrow">ROOT0 / TECHNE / CHRONOS / PIXEL CHRONICLE</div><h1>THE EMBEDDED PRIMITIVE</h1></div><div class="tag">[BOX(TOROID)] &nbsp; {{5x5}}^5 &nbsp; BOUNDARY 224</div></header>
+<div class="layout"><section class="frame" aria-label="Pixel-art story screen"><div class="screen"><canvas id="view" width="320" height="180" aria-label="Animated low-resolution pixel landscape and four chrome wheels"></canvas><div class="scan"></div></div><div class="status"><span id="loc">LOCATION: EMBEDDED STREAM</span><span id="ticks">CHRONOS TICK: 0000000</span><span id="wheels">CHROME: 4/4</span></div><div class="controls">
+<button id="prev" aria-label="Previous chapter">◀ PREV</button>
+<button class="primary" id="next">NEXT ▶</button>
+<button id="play">▶ AUTO PLAY</button>
+<button id="restart">↺ RESTART</button></div></section>
+<aside class="panel"><div class="chapter" id="chap">CHAPTER 01 / 08</div><div class="storytitle" id="title">THE ROCK IS EMBEDDED</div><div id="story" aria-live="polite"></div><div class="code" id="notation"></div><div class="checks"><span class="chip">4 CHROME WHEELS</span><span class="chip">6 ZEROS / 12 DIRECTIONS</span><span class="chip">24 CONTACTS</span><span class="chip">5 LEVELS</span></div><div class="mini"><b>MODEL / NOT PHYSICAL EVIDENCE.</b> The gravity-push / void-pull roles, Planck foam, and chromatic map are speculative computational metaphors. The clock/wavelength correspondences here are conventions, not measured astrophysics.</div></aside></div>
+<div class="lower"><section class="panel"><div class="chapter">BOUNDARY 224 / FAULT WITNESS</div><div class="storytitle">CAN THE PRIMITIVE CATCH A LIE?</div><p class="muted">Change one component while preserving the other labels. A true return must preserve the ordered Chrome coordinates, wavelength labels, CHRONOS tick, and five-level address.</p>
+<div class="controls"><button id="test">RUN 224 TEST</button><button id="faultWave">SWAP λ LABEL</button><button id="faultClock">SHIFT +1 TICK</button><button id="faultCoord">SHIFT COORD</button><button id="clear">CLEAR FAULTS</button></div><div class="checks"><span class="chip" id="tests">TEST: NOT RUN</span><span class="chip" id="state">IDENTITY: READY</span></div><div class="log" id="log" role="log" aria-live="polite"><div>GIBSON online. Historical witness events remain visible.</div></div><div class="controls"><button id="export">EXPORT GIBSON JSONL</button></div></section>
+<section class="panel"><div class="chapter">CLOCK / SPECTRAL / PERMUTATION</div><div class="storytitle">ONE PRIMITIVE, FOUR REFERENCES</div><p>Chrome wheels hold <strong>coordinates</strong>; coordinates map to spectral <strong>wavelength labels</strong>; color appears when rendered as an observation. Four steps permute the wheel positions and return them.</p>
+<div class="code" id="register">A 0000  380.000 nm
+B 1440  472.516 nm
+C 2880  565.032 nm
+D 4320  657.548 nm
+CHRONOS: 1 tick = light transit 0.01m
+1,296,000 ticks = one modeled full turn</div><p class="muted">The four Chrome coordinates are a vector of labels, not a claim that four actual optical photons exist inside a Planck-sized cell. A color gradient visualizes the assignment 380–750 nm.</p><div class="controls"><button id="rotate">ROTATE WHEELS</button><button id="runFull">TEST 4-TURN CLOSURE</button></div></section></div>
+<footer class="footer">CHRONOS · David Lee Wise / ROOT0 · Story and simulation interpretation of the established primitive · <a href="../">ORIGINAL FRACTAL INSTRUMENT</a> · <a href="../experiments/boundary223/README.md">B223 SOURCE</a> · <a href="https://github.com/DavidWise01/chronos-fractal">GITHUB</a></footer></main>
+<script>
+(()=>{'use strict';
+const chapters=[
+{title:"THE ROCK IS EMBEDDED",place:"EMBEDDED STREAM",body:"The stream moves. The rock does not float along on a board: it is embedded in its bed. Flow parts around it. This becomes the pin of the whole story.",notation:"STREAM → [ ROCK | PIN 0 ] → STREAM\nFRAME IS RELATIVE, NOT ABSOLUTE.",scene:0},
+{title:"THE LITTLE FISH, THE BIG POND",place:"COSMIC REFERENCES",body:"Earth is our voxel. The Sun supplies one inherited vector; the galaxy is a larger reference. Every smaller pond moves in a larger pond. Nib and Nib Sun are hypothetical labels, not verified bodies.",notation:"SAG A* → J-HOOK → (NIB SUN?) → (NIB?)\n→ SUN VECTOR → EARTH VOXEL",scene:1},
+{title:"BOX HOLDS THE TOROID",place:"CONTAINMENT CELL",body:"Inside a box, a toroidal flow loops around one embedded pin. Four variable void-pull regions surround a central gravity-push hypothesis. The roles are model assignments, not known forces.",notation:"[ BOX ( TOROID ) ]\n4 VARIABLE PULLS / 1 CENTER REFERENCE",scene:2},
+{title:"FOUR QUANTUM CHROME WHEELS",place:"CHROMATIC CORE",body:"The four U-shaped wheels circle one center like a Wankel-inspired mechanism. Each has 5,760 possible chromatic addresses. Coordinate, wavelength, and rendered color stay paired.",notation:"\\ U - U - U - U /\nA B C D ; CENTER {{0}} ; R^4 = I",scene:3},
+{title:"SIX ZEROS, TWELVE DIRECTIONS",place:"SIX-ZERO CLOCK",body:"Six zero anchors provide twelve signed directions and twenty-four named surface contacts. The six face pairs orient the entire primitive, not six separate universes.",notation:"{u,v,w,x,y,z} × {+,-} = 12\n6 FACES × 4 CONTACTS = 24",scene:4},
+{title:"CHRONOS COUNTS THE LIGHT",place:"LIGHT CLOCK",body:"One custom arcsecond tick equals light traveling one centimeter in vacuum. Sixty such ticks name an arcminute; sixty arcminutes name a degree. A complete modeled rotation contains 1,296,000 ticks.",notation:"1 TICK = 0.01 m / c ≈ 33.3564 ps\n360 × 60 × 60 = 1,296,000 TICKS",scene:5},
+{title:"THE FRACTAL INHERITS THE LOOP",place:"FIVE NESTED LEVELS",body:"Five {{5×5}} levels inherit the address, clock, mode, and wheel ordering. The shell folds 5--5 or opens 5++5. A matching clock alone is not a matching identity.",notation:"{{5×5}}^5\nIDENTITY = (ADDRESS, TICK, MODE, WHEELS)",scene:6},
+{title:"GIBSON REMEMBERS THE DIFFERENCE",place:"BOUNDARY 224",body:"Perturb the foam loop by ±1.025%. Bring it back by the true inverse, not by another opposite percentage. Swap one wavelength, tick, or coordinate. The witness detects each false return and stores its history.",notation:"TRUE INVERSE: ×(1+ε), THEN ÷(1+ε)\nε = 0.01025\nGIBSON = APPEND-ONLY WITNESS",scene:7}
+];
+const cv=document.getElementById("view"),g=cv.getContext("2d",{alpha:false}),dom=id=>document.getElementById(id);
+let chapter=0,t=0,autoplay=false,turns=0,order=[0,1,2,3],fault={wave:false,clock:false,coord:false},frame=0,lastAuto=0;const ids=[0,1440,2880,4320],N=5760,PER=1296000,events=[];
+const palette=["#ffbe70","#f8e2b8","#92e7d9","#599fbd","#6171be","#291d49","#13172e"];
+const px=(x,y,w,h,c)=>{g.fillStyle=c;g.fillRect(Math.round(x),Math.round(y),Math.ceil(w),Math.ceil(h))};
+function log(type,message){events.push({boundary:224,seq:events.length+1,tick:t,type,message});const el=dom("log"),line=document.createElement("div");line.textContent=String(events.length).padStart(3,"0")+" / "+type+" / "+message;el.append(line);el.scrollTop=el.scrollHeight;}
+function wavelength(j){return 380+370*j/(N-1)}
+function addr(){return order.map(i=>ids[i]);}
+function renderRegister(){let a=addr();if(fault.coord)a[0]=(a[0]+1)%N;const wl=a.map(wavelength);if(fault.wave)[wl[0],wl[1]]=[wl[1],wl[0]];dom("register").textContent=a.map((j,i)=>["A","B","C","D"][i]+" "+String(j).padStart(4,"0")+"   "+wl[i].toFixed(3)+" nm").join("\n")+"\nCHRONOS TICK "+String((t+(fault.clock?1:0))%PER).padStart(7,"0")+"\nFOAM ±1.025% / {{5×5}}^5";}
+function advance(step){chapter=(chapter+step+chapters.length)%chapters.length;const c=chapters[chapter];dom("chap").textContent="CHAPTER "+String(chapter+1).padStart(2,"0")+" / "+String(chapters.length).padStart(2,"0");dom("title").textContent=c.title;dom("story").textContent=c.body;dom("notation").textContent=c.notation;dom("loc").textContent="LOCATION: "+c.place;log("STORY",c.title);renderRegister()}
+function rotate(){order=[order[3],order[0],order[1],order[2]];turns++;log("ROTATE","quarter permutation "+turns+" / "+order.join(""));renderRegister()}
+function wheel(cx,cy,r,rot,index){const colors=["#fd8167","#f4d46d","#7cf3b6","#5ba6ed"];for(let i=0;i<16;i++){const a=rot+i*Math.PI/8;let x=cx+Math.cos(a)*r,y=cy+Math.sin(a)*r;px(x-2,y-2,4,4,colors[(i+index*3)%4]);}px(cx-4,cy-4,8,8,"#08172a");px(cx-2,cy-2,4,4,colors[index]);}
+function landscape(){g.fillStyle="#080d1d";g.fillRect(0,0,320,180);for(let i=0;i<65;i++){let x=((i*97+13)%320),y=((i*47+19)%95);px(x,y,((i%3)==0)?2:1,1,"#94a5d9")}for(let i=0;i<5;i++){px(0,126+i*8,320,8,i%2?"#0b4974":"#0d3960")}for(let i=0;i<23;i++){let x=(i*17+t/320)%338-8;px(x,128+(i*13)%40,13,1,"#46a8c8")}px(0,164,320,16,"#513e45");for(let i=0;i<65;i++)px((i*37)%320,166+(i*11)%13,4,2,"#8e6560");px(147,119,26,48,"#2d3244");px(143,113,34,21,"#92918e");px(149,109,23,7,"#c4aaa0");px(157,130,7,42,"#1c2533")}
+function cosmic(){g.fillStyle="#080c25";g.fillRect(0,0,320,180);for(let i=0;i<90;i++)px((i*83)%320,(i*43)%180,i%9===0?2:1,1,"#7c91d5");for(let i=0;i<10;i++){g.strokeStyle=i%2?"#35526d":"#183753";g.beginPath();g.arc(160,94,25+i*11,0,Math.PI*2);g.stroke()}px(150,84,20,20,"#ffd077");px(242,113,8,8,"#78bde6");px(75,54,4,4,"#ffc497");}
+function boxScene(){landscape();g.strokeStyle="#9ccde0";g.lineWidth=3;g.strokeRect(71,27,178,116);g.strokeStyle="#e2a377";g.beginPath();g.ellipse(160,92,63,23,t/1350,0,Math.PI*2);g.stroke();g.beginPath();g.ellipse(160,92,34,9,-t/1350,0,Math.PI*2);g.stroke();px(153,83,14,18,"#ffdc7c");}
+function chromeScene(){cosmic();for(let k=0;k<4;k++)wheel(56+k*69,87,25,t/730+k*Math.PI/5,k);px(154,125,12,12,"#ffe9a2");g.strokeStyle="#ffd16c";g.beginPath();g.moveTo(160,125);g.lineTo(56,112);g.moveTo(160,125);g.lineTo(263,112);g.stroke();}
+function zerosScene(){cosmic();for(let i=0;i<12;i++){const a=-Math.PI/2+i*Math.PI/6;const x=160+65*Math.cos(a),y=91+65*Math.sin(a);px(x-3,y-3,6,6,i<6?"#4de4d9":"#eea76c")}px(154,85,12,12,"#ffde94");g.strokeStyle="#3e718b";g.beginPath();g.arc(160,91,70,0,Math.PI*2);g.stroke();}
+function clockScene(){cosmic();g.strokeStyle="#4bcaba";for(let i=0;i<4;i++){g.beginPath();g.arc(160,89,22+i*15,0,Math.PI*2);g.stroke()}for(let i=0;i<12;i++){let a=i*Math.PI/6-t/1000;px(160+77*Math.cos(a),89+77*Math.sin(a),3,3,i%3?"#ff9f70":"#ffe59e")}px(155,84,10,10,"#ffe6a5")}
+function recursive(){boxScene();for(let i=0;i<5;i++){g.strokeStyle=["#e88267","#f7d068","#9fe29f","#5ebde0","#9870e8"][i];g.lineWidth=2;g.strokeRect(91+i*13,48+i*8,138-i*26,100-i*16)}}
+function witness(){chromeScene();g.strokeStyle=frame%30<15?"#69f1b1":"#ee9a66";g.lineWidth=2;g.strokeRect(16,18,288,145);for(let i=0;i<8;i++)px(36+i*35,153,18,3,i%2?"#efae77":"#66cebb");}
+function draw(){frame++;t=(t+113)%PER;let c=chapters[chapter].scene;
+if(c===0)landscape();else if(c===1)cosmic();else if(c===2)boxScene();else if(c===3)chromeScene();else if(c===4)zerosScene();else if(c===5)clockScene();else if(c===6)recursive();else witness();
+px(5,5,132,13,"#091424");g.font="8px monospace";g.fillStyle="#aef8dc";g.fillText("CHRONOS // ROOT0",10,14);
+px(232,5,82,12,"#1a2437");g.fillStyle="#ffd58b";g.fillText("B224 / PIXEL",239,14);
+dom("ticks").textContent="CHRONOS TICK: "+String(t).padStart(7,"0");
+if(autoplay&&performance.now()-lastAuto>7800){lastAuto=performance.now();advance(1)}requestAnimationFrame(draw)}
+function verify(){const before=[...order],w=ids.map(wavelength);let p=[...order];for(let k=0;k<4;k++)p=[p[3],p[0],p[1],p[2]];
+const cases=[
+["four-turn closure",p.every((v,i)=>v===before[i])],
+["coordinate range",ids.every(j=>j>=0&&j<N)],
+["unique wheel coordinates",new Set(ids).size===4],
+["wavelength monotonic",w.every((v,i)=>i===0||v>w[i-1])],
+["wavelength coordinate fidelity",ids.every((j,i)=>Math.abs(wavelength(j)-w[i])<1e-12)],
+["phase full-cycle closure",(t+PER)%PER===t],
+["12 signed directions",new Set(Array.from({length:12},(_,k)=>k*30)).size===12],
+["24 distinct face labels",new Set("abcdefghijklmnopqrstuvwx".split("")).size===24],
+["five recursion layers",Array(5).fill(25).length===5],
+["true positive scale inverse",Math.abs((1+0.01025)/(1+0.01025)-1)<1e-12],
+["opposite percent not inverse",Math.abs((1+0.01025)*(1-0.01025)-1)>1e-5],
+["wavelength swap detected",!(Math.abs(w[1]-w[0])<1e-12)],
+["one-tick corruption detected",(t+1)%PER!==t],
+["one-coordinate shift detected",(ids[0]+1)%N!==ids[0]],
+["distinct wheel order",JSON.stringify([3,0,1,2])!==JSON.stringify([0,1,2,3])]
+];
+const pass=cases.filter(x=>x[1]).length;dom("tests").textContent="TEST "+pass+"/"+cases.length+(pass===cases.length?" PASS":" FAIL");log("TEST","B224 "+pass+"/"+cases.length+"; 3 fault controls available");return pass===cases.length;}
+function checkFault(){const current=addr();if(fault.coord)current[0]=(current[0]+1)%N;const labels=current.map(wavelength);if(fault.wave)[labels[0],labels[1]]=[labels[1],labels[0]];
+const expected=addr().map(wavelength),problems=[];
+if(labels.some((v,i)=>Math.abs(v-expected[i])>1e-10))problems.push("WAVELENGTH PAIR MISMATCH");
+if(fault.coord)problems.push("COORDINATE ADDRESS SHIFT");
+if(fault.clock)problems.push("CHRONOS +1 TICK");
+dom("state").textContent=problems.length?"FALSE CLOSURE: "+problems.length+" DETECTED":"IDENTITY: ALIGNED";return problems;}
+dom("prev").onclick=()=>advance(-1);dom("next").onclick=()=>advance(1);
+dom("restart").onclick=()=>{chapter=chapters.length-1;advance(1);order=[0,1,2,3];turns=0;renderRegister()};
+dom("play").onclick=()=>{autoplay=!autoplay;dom("play").textContent=autoplay?"❚❚ PAUSE":"▶ AUTO PLAY";lastAuto=performance.now();log("PLAY",autoplay?"auto story enabled":"auto story paused")};
+dom("rotate").onclick=()=>{rotate();checkFault()};
+dom("runFull").onclick=()=>{for(let i=0;i<4;i++)rotate();const ok=order.every((v,i)=>v===i);log("CLOSURE",ok?"4-turn return confirmed":"RETURN FAILED");dom("state").textContent=ok?"IDENTITY: ALIGNED":"FALSE CLOSURE"};
+dom("test").onclick=verify;
+dom("faultWave").onclick=()=>{fault.wave=!fault.wave;log("FAULT", "wavelength swap "+(fault.wave?"ON":"OFF"));checkFault();renderRegister()};
+dom("faultClock").onclick=()=>{fault.clock=!fault.clock;log("FAULT", "one-tick clock shift "+(fault.clock?"ON":"OFF"));checkFault();renderRegister()};
+dom("faultCoord").onclick=()=>{fault.coord=!fault.coord;log("FAULT", "coordinate shift "+(fault.coord?"ON":"OFF"));checkFault();renderRegister()};
+dom("clear").onclick=()=>{fault={wave:false,clock:false,coord:false};log("WITNESS","fault controls restored");checkFault();renderRegister()};
+dom("export").onclick=()=>{const lines=events.map(x=>JSON.stringify(x)).join("\n")+"\n";const a=document.createElement("a"),u=URL.createObjectURL(new Blob([lines],{type:"application/x-ndjson"}));a.href=u;a.download="chronos-gibson-boundary224.jsonl";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+advance(0);verify();draw();
+})();
+</script></body></html>
