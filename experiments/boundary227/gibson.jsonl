@@ -1,0 +1,8 @@
+{"boundary":227,"seq":1,"event":"motion_memory_witness","stream":0.65,"retained_motion":0.65,"tick":324000,"loop_position":1,"physical_evidence":false}
+{"boundary":227,"seq":2,"event":"motion_memory_witness","stream":0.65,"retained_motion":0.65,"tick":648000,"loop_position":2,"physical_evidence":false}
+{"boundary":227,"seq":3,"event":"motion_memory_witness","stream":-0.65,"retained_motion":0.325,"tick":972000,"loop_position":3,"physical_evidence":false}
+{"boundary":227,"seq":4,"event":"motion_memory_witness","stream":-0.65,"retained_motion":0.08125,"tick":0,"loop_position":0,"physical_evidence":false}
+{"boundary":227,"seq":5,"event":"motion_memory_witness","stream":-0.65,"retained_motion":-0.1015625,"tick":324000,"loop_position":1,"physical_evidence":false}
+{"boundary":227,"seq":6,"event":"motion_memory_witness","stream":-0.65,"retained_motion":-0.238671875,"tick":648000,"loop_position":2,"physical_evidence":false}
+{"boundary":227,"seq":7,"event":"motion_memory_witness","stream":-0.65,"retained_motion":-0.34150390625,"tick":972000,"loop_position":3,"physical_evidence":false}
+{"boundary":227,"seq":8,"event":"motion_memory_witness","stream":-0.65,"retained_motion":-0.4186279296875,"tick":0,"loop_position":0,"physical_evidence":false}
