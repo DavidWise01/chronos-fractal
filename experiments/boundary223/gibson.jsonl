@@ -1,0 +1,5 @@
+{"event":"curvature_measurement","boundary":223,"level":0,"base":0.5,"plus":0.499041564,"minus":0.500950106,"epsilon":0.01025}
+{"event":"curvature_measurement","boundary":223,"level":1,"base":0.535898385,"plus":0.535644999,"minus":0.536149282,"epsilon":0.01025}
+{"event":"curvature_measurement","boundary":223,"level":2,"base":0.545186779,"plus":0.545122547,"minus":0.545250362,"epsilon":0.01025}
+{"event":"curvature_measurement","boundary":223,"level":3,"base":0.547528872,"plus":0.547512758,"minus":0.547544822,"epsilon":0.01025}
+{"event":"curvature_measurement","boundary":223,"level":4,"base":0.548115651,"plus":0.548111619,"minus":0.548119642,"epsilon":0.01025}
