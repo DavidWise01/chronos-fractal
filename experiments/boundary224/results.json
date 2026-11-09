@@ -1,0 +1,16 @@
+{
+  "boundary": 224,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 21,
+  "checks_total": 21,
+  "spec": "four 5760-address wheels, five {{5x5}} levels, 6 zeros, 12 directed channels, 24 surface contacts",
+  "detected": [
+    "wavelength label swap",
+    "one tick offset",
+    "coordinate mutation",
+    "mode change",
+    "five-level address mutation"
+  ],
+  "notes": "independent Python test passed locally; toy model only"
+}
