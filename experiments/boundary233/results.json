@@ -1,0 +1,50 @@
+{
+  "boundary": 233,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 56,
+  "checks_total": 56,
+  "model": "alpha_effective = alpha_nominal * (1 + foam_modulation)",
+  "initial_memory": 0.543016542866826,
+  "target_stream": 0.65,
+  "initial_gap": 0.10698345713317403,
+  "tolerance": 0.001,
+  "foam_delta": 0.01025,
+  "modes": [
+    {
+      "id": "negative_foam",
+      "modulation": -0.01025,
+      "nominal_lower_inclusive": 0.6962001693654924,
+      "nominal_upper_exclusive": 0.797524793766444,
+      "window_width_percentage_points": 10.132462440095162,
+      "nominal_75_effective_alpha": 0.7423125,
+      "nominal_75_memory_step": 4,
+      "nominal_75_joint_step": 4,
+      "nominal_75_final_gap": 0.0004717262418296779
+    },
+    {
+      "id": "baseline",
+      "modulation": 0,
+      "nominal_lower_inclusive": 0.6890641176294962,
+      "nominal_upper_exclusive": 0.789350164630338,
+      "window_width_percentage_points": 10.028604700084188,
+      "nominal_75_effective_alpha": 0.75,
+      "nominal_75_memory_step": 4,
+      "nominal_75_joint_step": 4,
+      "nominal_75_final_gap": 0.00041790412942646106
+    },
+    {
+      "id": "positive_foam",
+      "modulation": 0.01025,
+      "nominal_lower_inclusive": 0.6820728707047722,
+      "nominal_upper_exclusive": 0.7813414151253036,
+      "window_width_percentage_points": 9.926854442053141,
+      "nominal_75_effective_alpha": 0.7576875000000001,
+      "nominal_75_memory_step": 4,
+      "nominal_75_joint_step": 4,
+      "nominal_75_final_gap": 0.00036882461799031665
+    }
+  ],
+  "conclusion": "The first-crossing step-four interval shifts and changes width; nominal 75% still aligns in all three cases.",
+  "limitations": "The 1.025% foam term is a synthetic parameter. These tests are not a physical Planck-foam observation."
+}
