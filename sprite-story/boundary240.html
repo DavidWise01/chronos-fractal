@@ -21,7 +21,7 @@ const stories=[
 ["Minimum Safe Succeeds","At the guarded minimum, the memory threshold is reached on step eight exactly as all four Chrome wheels and clock close."],
 ["More Correction Is Not More Time","Returning all the way to 73.8771% reduces the memory gap further but saves no additional clock cycles in this model."]
 ];
-function activeRate(k){return k<=4?(mode==="safe"?C:S):(mode==="slow"?S:C)}
+function activeRate(k){return k<=4?SLOW:(mode==="slow"?SLOW:mode==="safe"?C:mode==="below"?MINIMUM-1e-6:SAFE_MINIMUM)}
 function append(type,detail){const e={boundary:240,seq:records.length+1,type,mode,step,memory:m,gap:Math.abs(.65-m),tick:step*Q,detail};records.push(e);const el=document.createElement("div");el.textContent=String(e.seq).padStart(3,"0")+" / "+type+" / "+detail;$("log").appendChild(el);$("log").scrollTop=$("log").scrollHeight}
 function inspect(){let coords=order.map(i=>W[i]);if(fault.coord)coords[0]=(coords[0]+1)%5760;let waves=order.map(i=>lambda(W[i]));if(fault.wave)[waves[0],waves[1]]=[waves[1],waves[0]];let bad=[];coords.forEach((j,i)=>{if(Math.abs(lambda(j)-waves[i])>1e-9)bad.push("CHROME "+i)});if(fault.clock)bad.push("CLOCK +1");return {coords,waves,bad}}
 function drawText(){const gap=Math.abs(.65-m),a=activeRate(step+1),p=inspect(),full=(gap<=T&&step%4===0),ready=gap<=T;
