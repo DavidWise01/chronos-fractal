@@ -1,0 +1,8 @@
+{"boundary":241,"seq":1,"event":"shared_failed_gate","step":4,"gap":0.013865056044459353,"alpha":0.4,"clock":0}
+{"boundary":241,"seq":2,"event":"robust_threshold_derived","command":0.49176284858044306,"formula":"minimum/(1-E)+J"}
+{"boundary":241,"seq":3,"event":"guarded_command","command":0.49176284868044307,"guard":1e-10,"reset":false}
+{"boundary":241,"seq":4,"event":"worst_case_return","step":8,"command":0.49176284868044307,"error":-0.005,"foam":-0.01025,"gap":0.000999999999236049,"accepted":true}
+{"boundary":241,"seq":5,"event":"best_case_return","step":8,"command":0.49176284868044307,"error":0.005,"foam":0.01025,"gap":0.000853779828370613,"accepted":true}
+{"boundary":241,"seq":6,"event":"below_threshold_failed","step":8,"command":0.4917618485804431,"error":-0.005,"foam":-0.01025,"gap":0.0010000076395390168,"accepted":false}
+{"boundary":241,"seq":7,"event":"passive_observation_return","step":12,"gap":0.00023287969973170638,"accepted":true}
+{"boundary":241,"seq":8,"event":"timing_comparison","step":8,"cycles_saved":1,"ticks_saved":1296000}
