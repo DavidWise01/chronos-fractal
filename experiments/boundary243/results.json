@@ -1,0 +1,126 @@
+{
+  "boundary": 243,
+  "date": "2026-11-09",
+  "checks_passed": 113,
+  "checks_total": 113,
+  "data_origin": "synthetic",
+  "reference_memory": 0.543016542866826,
+  "step4_gap": 0.013865056044459353,
+  "tolerance": 0.001,
+  "minimum_rate": 0.4817735293824935,
+  "guard": 1e-10,
+  "training": [
+    {
+      "id": "o01",
+      "rate_error": -0.002,
+      "modulation": -0.005,
+      "origin": "synthetic_training"
+    },
+    {
+      "id": "o02",
+      "rate_error": 0.004,
+      "modulation": 0.007,
+      "origin": "synthetic_training"
+    },
+    {
+      "id": "o03",
+      "rate_error": -0.005,
+      "modulation": -0.008,
+      "origin": "synthetic_training"
+    },
+    {
+      "id": "o04",
+      "rate_error": 0.003,
+      "modulation": 0.009,
+      "origin": "synthetic_training"
+    },
+    {
+      "id": "o05",
+      "rate_error": 0,
+      "modulation": 0,
+      "origin": "synthetic_training"
+    },
+    {
+      "id": "o06",
+      "rate_error": -0.003,
+      "modulation": 0.01,
+      "origin": "synthetic_training"
+    }
+  ],
+  "initial_calibration": {
+    "j": 0.005,
+    "f": 0.01,
+    "command": 0.4916399287691854,
+    "samples": 6
+  },
+  "held_out_evaluation": [
+    {
+      "id": "h01",
+      "rate_error": -0.004,
+      "modulation": -0.009,
+      "origin": "synthetic_holdout",
+      "coverage": "COVERED",
+      "actual_outcome": "PASS",
+      "effective_rate": 0.4832511694102627,
+      "gap_at_step8": 0.0009886433269300004
+    },
+    {
+      "id": "h02",
+      "rate_error": 0.002,
+      "modulation": 0.006,
+      "origin": "synthetic_holdout",
+      "coverage": "COVERED",
+      "actual_outcome": "PASS",
+      "effective_rate": 0.4966017683418005,
+      "gap_at_step8": 0.0008903655990804541
+    },
+    {
+      "id": "h03",
+      "rate_error": 0.006,
+      "modulation": 0.001,
+      "origin": "synthetic_holdout",
+      "coverage": "UNKNOWN",
+      "actual_outcome": "PASS",
+      "effective_rate": 0.4981375686979545,
+      "gap_at_step8": 0.0008795496788237228
+    },
+    {
+      "id": "h04",
+      "rate_error": -0.008,
+      "modulation": -0.015,
+      "origin": "synthetic_holdout",
+      "coverage": "UNKNOWN",
+      "actual_outcome": "FAIL",
+      "effective_rate": 0.4763853298376476,
+      "gap_at_step8": 0.0010422426767621772
+    },
+    {
+      "id": "h05",
+      "rate_error": -0.0055,
+      "modulation": -0.0105,
+      "origin": "synthetic_holdout",
+      "coverage": "UNKNOWN",
+      "actual_outcome": "FAIL",
+      "effective_rate": 0.48103545951710897,
+      "gap_at_step8": 0.0010057090725284538
+    }
+  ],
+  "updated_calibration": {
+    "j": 0.008,
+    "f": 0.015,
+    "command": 0.4971101822142066,
+    "samples": 7
+  },
+  "replay_failed_holdout": {
+    "id": "h04",
+    "rate_error": -0.008,
+    "modulation": -0.015,
+    "origin": "synthetic_holdout",
+    "coverage": "COVERED",
+    "actual_outcome": "PASS",
+    "effective_rate": 0.4817735294809935,
+    "gap_at_step8": 0.0009999999992397152
+  },
+  "rule": "Coverage requires error and modulation independently within max absolute values from training; actual PASS/FAIL is computed separately.",
+  "warning": "Finite observed coverage is not a statistical or universal safety guarantee; data are simulated, not sensor observations."
+}
