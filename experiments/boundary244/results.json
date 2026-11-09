@@ -1,0 +1,145 @@
+{
+  "boundary": 244,
+  "date": "2026-11-09",
+  "status": "PASS",
+  "checks_passed": 94,
+  "checks_total": 94,
+  "baseline": {
+    "j": 0.005,
+    "f": 0.01,
+    "command": 0.4916399287691854,
+    "count": 6
+  },
+  "admitted_calibration": {
+    "j": 0.008,
+    "f": 0.015,
+    "command": 0.4971101822142066,
+    "count": 8
+  },
+  "decisions": [
+    {
+      "id": "h04",
+      "status": "ADMIT",
+      "reasons": [],
+      "calibration_changed": true
+    },
+    {
+      "id": "h04-duplicate",
+      "status": "HOLD",
+      "reasons": [
+        "DUPLICATE"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h05-dependent",
+      "status": "HOLD",
+      "reasons": [
+        "DEPENDENT_LINEAGE"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h06-insufficient",
+      "status": "HOLD",
+      "reasons": [
+        "WITNESSES_INSUFFICIENT",
+        "DEPENDENT_LINEAGE",
+        "WITNESS_TIME_INVALID"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h07-stale",
+      "status": "HOLD",
+      "reasons": [
+        "STALE"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h08-no-source",
+      "status": "HOLD",
+      "reasons": [
+        "SOURCE_MISSING"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h09-bad-witness",
+      "status": "HOLD",
+      "reasons": [
+        "WITNESS_INVALID_OR_REUSED"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h10-inside",
+      "status": "ADMIT",
+      "reasons": [],
+      "calibration_changed": true
+    },
+    {
+      "id": "h11-future",
+      "status": "HOLD",
+      "reasons": [
+        "TIME_INVALID",
+        "WITNESS_TIME_INVALID"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h12-reused-witness",
+      "status": "HOLD",
+      "reasons": [
+        "WITNESS_INVALID_OR_REUSED",
+        "WITNESS_TIME_INVALID"
+      ],
+      "calibration_changed": false
+    },
+    {
+      "id": "h13-nonfinite",
+      "status": "HOLD",
+      "reasons": [
+        "NONFINITE"
+      ],
+      "calibration_changed": false
+    }
+  ],
+  "admitted_ids": [
+    "h04",
+    "h10-inside"
+  ],
+  "held_ids": [
+    "h04-duplicate",
+    "h05-dependent",
+    "h06-insufficient",
+    "h07-stale",
+    "h08-no-source",
+    "h09-bad-witness",
+    "h11-future",
+    "h12-reused-witness",
+    "h13-nonfinite"
+  ],
+  "replay_before": {
+    "effective": 0.4763853298376476,
+    "gap": 0.0010422426767621772,
+    "pass": false
+  },
+  "replay_after": {
+    "effective": 0.4817735294809935,
+    "gap": 0.0009999999992397152,
+    "pass": true
+  },
+  "evidence_policy": {
+    "source_required": true,
+    "max_age_model_ticks": 100,
+    "evaluation_tick": 1000,
+    "witness_group_minimum": 3,
+    "reuse_forbidden": true,
+    "identity": "exact JSON tuple of source, error, modulation, timestamp; noncryptographic",
+    "held_data_effect": "none on calibration",
+    "authentication": "synthetic witness metadata only"
+  },
+  "caveat": "No real signature verification or independence proof. Synthetic data and model timestamps, not physical observations."
+}
