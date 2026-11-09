@@ -1,0 +1,364 @@
+{
+  "boundary": 237,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 77,
+  "checks_total": 77,
+  "model": "first 4 steps at breached corner, subsequent steps corrected to stable-core center; retain memory state",
+  "initial_memory": 0.543016542866826,
+  "stream_target": 0.65,
+  "tolerance": 0.001,
+  "center": 0.7387707922453981,
+  "nominal_disturbance": 0.02,
+  "base_foam": 0.01025,
+  "extra_foam": 0.032,
+  "slow_effective_rate": 0.68840272627303,
+  "fast_effective_rate": 0.7908288582177663,
+  "slow_history": [
+    {
+      "step": 1,
+      "effective_rate": 0.68840272627303,
+      "memory_gap": 0.03333575357658319,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "effective_rate": 0.68840272627303,
+      "memory_gap": 0.01038732993209741,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "effective_rate": 0.68840272627303,
+      "memory_gap": 0.0032366636881441054,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "effective_rate": 0.68840272627303,
+      "memory_gap": 0.001008535581196783,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 5,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.0002634589508683626,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.00006882317301120095,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.000017978622960873922,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.000004696541432587789,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": true,
+      "full_return": true
+    },
+    {
+      "step": 9,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.0000012268737976215712,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 3.2049527016756285e-7,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 8.372272551496955e-8,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 2.1870821257331488e-8,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": true,
+      "full_return": true
+    }
+  ],
+  "fast_history": [
+    {
+      "step": 1,
+      "effective_rate": 0.7908288582177663,
+      "memory_gap": 0.02237785188035667,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "effective_rate": 0.7908288582177663,
+      "memory_gap": 0.004680800828447911,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": false,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "effective_rate": 0.7908288582177663,
+      "memory_gap": 0.000979088453741675,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "effective_rate": 0.7908288582177663,
+      "memory_gap": 0.0002047970497749479,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": true,
+      "full_return": true
+    },
+    {
+      "step": 5,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.00005349897106318941,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.000013975493826523342,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 0.0000036508071802820222,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 9.536974673698848e-7,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": true,
+      "full_return": true
+    },
+    {
+      "step": 9,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 2.491336338386053e-7,
+      "wheel_order": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 6.508098179268393e-8,
+      "wheel_order": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 1.7001053313594495e-8,
+      "wheel_order": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "within_tolerance": true,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "effective_rate": 0.7387707922453981,
+      "memory_gap": 4.441171688104039e-9,
+      "wheel_order": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "within_tolerance": true,
+      "full_return": true
+    }
+  ],
+  "slow_failed_clock_cycle_step": 4,
+  "memory_recovery_step": 5,
+  "first_full_recovery_step": 8,
+  "recovery_extra_steps": 4,
+  "recovery_extra_chronos_ticks": 1296000,
+  "fast_side_caveat": "Fast branch first enters memory tolerance at step 3 yet its wheel and clock are home at step 4. It misses exact first-crossing alignment but not full-state-in-tolerance acceptance.",
+  "scope": "Simulated recursive memory, not physical recovery or energy measurement."
+}
