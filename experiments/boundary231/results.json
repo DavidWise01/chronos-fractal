@@ -1,0 +1,105 @@
+{
+  "boundary": 231,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 58,
+  "checks_total": 58,
+  "initial_memory": 0.543016542866826,
+  "reference_stream": 0.65,
+  "tolerance": 0.001,
+  "initial_gap": 0.10698345713317403,
+  "rate_table": [
+    {
+      "alpha": 0.1,
+      "memory_gate": 45,
+      "joint_gate": 48,
+      "wait_steps": 3,
+      "memory_gap": 0.0009337477162464177,
+      "joint_gap": 0.0006807020851436384,
+      "chronos_ticks": 15552000
+    },
+    {
+      "alpha": 0.15,
+      "memory_gate": 29,
+      "joint_gate": 32,
+      "wait_steps": 3,
+      "memory_gap": 0.0009604294611796671,
+      "joint_gap": 0.0005898237428469629,
+      "chronos_ticks": 10368000
+    },
+    {
+      "alpha": 0.2,
+      "memory_gate": 21,
+      "joint_gate": 24,
+      "wait_steps": 3,
+      "memory_gap": 0.00098674822692817,
+      "joint_gap": 0.0005052150921872232,
+      "chronos_ticks": 7776000
+    },
+    {
+      "alpha": 0.25,
+      "memory_gate": 17,
+      "joint_gate": 20,
+      "wait_steps": 3,
+      "memory_gap": 0.000804188957698737,
+      "joint_gap": 0.00033926721652915455,
+      "chronos_ticks": 6480000
+    },
+    {
+      "alpha": 0.3,
+      "memory_gate": 14,
+      "joint_gate": 16,
+      "wait_steps": 2,
+      "memory_gap": 0.0007255864904087051,
+      "joint_gap": 0.00035553738030026535,
+      "chronos_ticks": 5184000
+    },
+    {
+      "alpha": 0.4,
+      "memory_gate": 10,
+      "joint_gate": 12,
+      "wait_steps": 2,
+      "memory_gap": 0.0006468880548102955,
+      "joint_gap": 0.00023287969973170632,
+      "chronos_ticks": 3888000
+    },
+    {
+      "alpha": 0.5,
+      "memory_gate": 7,
+      "joint_gate": 8,
+      "wait_steps": 1,
+      "memory_gap": 0.0008358082588529221,
+      "joint_gap": 0.00041790412942646106,
+      "chronos_ticks": 2592000
+    },
+    {
+      "alpha": 0.6,
+      "memory_gate": 6,
+      "joint_gate": 8,
+      "wait_steps": 2,
+      "memory_gap": 0.00043820424041748093,
+      "joint_gap": 0.00007011267846679697,
+      "chronos_ticks": 2592000
+    },
+    {
+      "alpha": 0.75,
+      "memory_gate": 4,
+      "joint_gate": 4,
+      "wait_steps": 0,
+      "memory_gap": 0.00041790412942646106,
+      "joint_gap": 0.00041790412942646106,
+      "chronos_ticks": 1296000
+    },
+    {
+      "alpha": 1,
+      "memory_gate": 1,
+      "joint_gate": 4,
+      "wait_steps": 3,
+      "memory_gap": 0,
+      "joint_gap": 0,
+      "chronos_ticks": 1296000
+    }
+  ],
+  "discovery": "Within sampled rates, 75% adaptation first reaches memory threshold on step 4, exactly at the four-wheel/clock closure. 100% adaptation reaches memory on step 1 but joint gate remains step 4.",
+  "scope": "Mathematical discrete toy relaxation, not evidence of physical resonance."
+}
