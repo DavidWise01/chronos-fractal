@@ -1,0 +1,72 @@
+{
+  "boundary": 230,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 42,
+  "checks_total": 42,
+  "initial_memory": 0.543016542866826,
+  "stream_target": 0.65,
+  "adaptation_rate": 0.25,
+  "initial_gap": 0.10698345713317403,
+  "chromatic_wheels": 4,
+  "addresses_per_wheel": 5760,
+  "levels": 5,
+  "clock_ticks_per_turn": 1296000,
+  "tests": [
+    {
+      "tolerance": 0.1,
+      "memory_step": 1,
+      "joint_step": 4,
+      "memory_gap": 0.08023759284988052,
+      "joint_gap": 0.033850234483543344,
+      "memory_ticks": 324000,
+      "joint_ticks": 1296000
+    },
+    {
+      "tolerance": 0.01,
+      "memory_step": 9,
+      "joint_step": 12,
+      "memory_gap": 0.008032819315918979,
+      "joint_gap": 0.003388845648903319,
+      "memory_ticks": 2916000,
+      "joint_ticks": 3888000
+    },
+    {
+      "tolerance": 0.001,
+      "memory_step": 17,
+      "joint_step": 20,
+      "memory_gap": 0.000804188957698737,
+      "joint_gap": 0.00033926721652915455,
+      "memory_ticks": 5508000,
+      "joint_ticks": 6480000
+    },
+    {
+      "tolerance": 0.0001,
+      "memory_step": 25,
+      "joint_step": 28,
+      "memory_gap": 0.00008050970079744587,
+      "joint_gap": 0.00003396503002392247,
+      "memory_ticks": 8100000,
+      "joint_ticks": 9072000
+    },
+    {
+      "tolerance": 0.00001,
+      "memory_step": 33,
+      "joint_step": 36,
+      "memory_gap": 0.00000806006083575504,
+      "joint_gap": 0.0000034003381650841575,
+      "memory_ticks": 10692000,
+      "joint_ticks": 11664000
+    },
+    {
+      "tolerance": 0.000001,
+      "memory_step": 41,
+      "joint_step": 44,
+      "memory_gap": 8.069161856596194e-7,
+      "joint_gap": 3.4041776582515193e-7,
+      "memory_ticks": 13284000,
+      "joint_ticks": 14256000
+    }
+  ],
+  "limits": "Discrete toy relaxation; changing precision alters acceptance criterion, not the underlying state. No physical Planck-scale claims."
+}
