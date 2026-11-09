@@ -1,0 +1,8 @@
+{"boundary":239,"seq":1,"event":"common_failure","step":4,"passive_gap":0.013865056044459353,"corrected_gap":0.013865056044459353}
+{"boundary":239,"seq":2,"event":"intervention_applied","step":5,"rate":0.7387707922453981,"previous_gap":0.013865056044459353,"reset":false}
+{"boundary":239,"seq":3,"event":"corrected_memory_ready","step":6,"gap":0.0009461611159275849,"phase":2}
+{"boundary":239,"seq":4,"event":"corrected_full_return","step":8,"gap":0.00006456669590247158,"clock":0}
+{"boundary":239,"seq":5,"event":"passive_still_outside","step":8,"gap":0.001796911263361932,"clock":0}
+{"boundary":239,"seq":6,"event":"passive_memory_ready","step":10,"gap":0.0006468880548102955,"phase":2}
+{"boundary":239,"seq":7,"event":"passive_full_return","step":12,"gap":0.00023287969973170638,"clock":0}
+{"boundary":239,"seq":8,"event":"timing_comparison","passive_first_full":12,"corrected_first_full":8,"steps_saved":4,"ticks_saved":1296000}
