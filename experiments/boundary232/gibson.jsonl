@@ -1,0 +1,6 @@
+{"boundary":232,"seq":1,"event":"edge_gate_witness","name":"below_lower","alpha":0.6890541176294962,"memory_step":5,"joint_step":8,"extra_wait":3,"final_memory_gap":0.0003109858855867042}
+{"boundary":232,"seq":2,"event":"edge_gate_witness","name":"lower_edge","alpha":0.6890641176294962,"memory_step":4,"joint_step":4,"extra_wait":0,"final_memory_gap":0.0009999999999999998}
+{"boundary":232,"seq":3,"event":"edge_gate_witness","name":"inside_75_percent","alpha":0.75,"memory_step":4,"joint_step":4,"extra_wait":0,"final_memory_gap":0.00041790412942646106}
+{"boundary":232,"seq":4,"event":"edge_gate_witness","name":"below_upper","alpha":0.7893401646303381,"memory_step":4,"joint_step":4,"extra_wait":0,"final_memory_gap":0.00021068983821808076}
+{"boundary":232,"seq":5,"event":"edge_gate_witness","name":"upper_edge","alpha":0.789350164630338,"memory_step":3,"joint_step":4,"extra_wait":1,"final_memory_gap":0.001}
+{"boundary":232,"seq":6,"event":"edge_gate_witness","name":"above_upper","alpha":0.789360164630338,"memory_step":3,"joint_step":4,"extra_wait":1,"final_memory_gap":0.0009998575903189988}
