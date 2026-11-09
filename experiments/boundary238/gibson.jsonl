@@ -1,0 +1,6 @@
+{"boundary":238,"seq":1,"event":"common_first_failure","step":4,"passive_gap":0.001008535581196783,"corrected_gap":0.001008535581196783}
+{"boundary":238,"seq":2,"event":"passive_continues","step":5,"rate":0.68840272627303,"gap":0.0003142569375575628}
+{"boundary":238,"seq":3,"event":"correction_applied","step":5,"rate":0.7387707922453981,"gap":0.0002634589508683626,"reset":false}
+{"boundary":238,"seq":4,"event":"both_memory_ready","step":5,"passive_gap":0.0003142569375575628,"corrected_gap":0.0002634589508683626}
+{"boundary":238,"seq":5,"event":"both_full_return","step":8,"passive_gap":0.00000950748878187571,"corrected_gap":0.000004696541432587789,"clock":0,"extra_ticks":1296000}
+{"boundary":238,"seq":6,"event":"comparison","step":8,"delta_gap":0.000004810947349287921,"timing_gain_steps":0}
