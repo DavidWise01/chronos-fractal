@@ -1,0 +1,16 @@
+{"boundary":228,"kind":"memory_witness","step":1,"stream":0.65,"memory":0.65,"clock_tick":324000,"wheels":[3,0,1,2],"cumulative_effort":0.35}
+{"boundary":228,"kind":"memory_witness","step":2,"stream":0.65,"memory":0.65,"clock_tick":648000,"wheels":[2,3,0,1],"cumulative_effort":0.7}
+{"boundary":228,"kind":"memory_witness","step":3,"stream":-0.65,"memory":0.32500000000000007,"clock_tick":972000,"wheels":[1,2,3,0],"cumulative_effort":1.375}
+{"boundary":228,"kind":"memory_witness","step":4,"stream":-0.65,"memory":0.08125000000000004,"clock_tick":0,"wheels":[0,1,2,3],"cumulative_effort":2.29375}
+{"boundary":228,"kind":"memory_witness","step":5,"stream":-0.65,"memory":-0.10156249999999997,"clock_tick":324000,"wheels":[3,0,1,2],"cumulative_effort":3.3953125}
+{"boundary":228,"kind":"memory_witness","step":6,"stream":-0.65,"memory":-0.23867187499999998,"clock_tick":648000,"wheels":[2,3,0,1],"cumulative_effort":4.633984375000001}
+{"boundary":228,"kind":"memory_witness","step":7,"stream":-0.65,"memory":-0.34150390625,"clock_tick":972000,"wheels":[1,2,3,0],"cumulative_effort":5.9754882812500005}
+{"boundary":228,"kind":"memory_witness","step":8,"stream":-0.65,"memory":-0.41862792968749996,"clock_tick":0,"wheels":[0,1,2,3],"cumulative_effort":7.394116210937501}
+{"boundary":228,"kind":"memory_witness","step":9,"stream":0.65,"memory":-0.15147094726562496,"clock_tick":324000,"wheels":[3,0,1,2],"cumulative_effort":8.545587158203126}
+{"boundary":228,"kind":"memory_witness","step":10,"stream":0.65,"memory":0.04889678955078128,"clock_tick":648000,"wheels":[2,3,0,1],"cumulative_effort":9.496690368652345}
+{"boundary":228,"kind":"memory_witness","step":11,"stream":0.65,"memory":0.19917259216308597,"clock_tick":972000,"wheels":[1,2,3,0],"cumulative_effort":10.29751777648926}
+{"boundary":228,"kind":"memory_witness","step":12,"stream":0.65,"memory":0.3118794441223145,"clock_tick":0,"wheels":[0,1,2,3],"cumulative_effort":10.985638332366944}
+{"boundary":228,"kind":"memory_witness","step":13,"stream":0.65,"memory":0.3964095830917359,"clock_tick":324000,"wheels":[3,0,1,2],"cumulative_effort":11.58922874927521}
+{"boundary":228,"kind":"memory_witness","step":14,"stream":0.65,"memory":0.4598071873188019,"clock_tick":648000,"wheels":[2,3,0,1],"cumulative_effort":12.129421561956407}
+{"boundary":228,"kind":"memory_witness","step":15,"stream":0.65,"memory":0.5073553904891014,"clock_tick":972000,"wheels":[1,2,3,0],"cumulative_effort":12.622066171467306}
+{"boundary":228,"kind":"memory_witness","step":16,"stream":0.65,"memory":0.543016542866826,"clock_tick":0,"wheels":[0,1,2,3],"cumulative_effort":13.07904962860048}
