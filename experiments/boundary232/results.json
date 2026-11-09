@@ -1,0 +1,72 @@
+{
+  "boundary": 232,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 48,
+  "checks_total": 48,
+  "reference_stream": 0.65,
+  "initial_memory": 0.543016542866826,
+  "initial_gap": 0.10698345713317403,
+  "tolerance": 0.001,
+  "window": {
+    "lower_inclusive": 0.6890641176294962,
+    "upper_exclusive": 0.789350164630338,
+    "percentage_lower": 68.90641176294962,
+    "percentage_upper": 78.9350164630338,
+    "width_percentage_points": 10.028604700084188
+  },
+  "examples": [
+    {
+      "name": "below_lower",
+      "alpha": 0.6890541176294962,
+      "memory_step": 5,
+      "joint_step": 8,
+      "extra_wait": 3,
+      "final_memory_gap": 0.0003109858855867042
+    },
+    {
+      "name": "lower_edge",
+      "alpha": 0.6890641176294962,
+      "memory_step": 4,
+      "joint_step": 4,
+      "extra_wait": 0,
+      "final_memory_gap": 0.0009999999999999998
+    },
+    {
+      "name": "inside_75_percent",
+      "alpha": 0.75,
+      "memory_step": 4,
+      "joint_step": 4,
+      "extra_wait": 0,
+      "final_memory_gap": 0.00041790412942646106
+    },
+    {
+      "name": "below_upper",
+      "alpha": 0.7893401646303381,
+      "memory_step": 4,
+      "joint_step": 4,
+      "extra_wait": 0,
+      "final_memory_gap": 0.00021068983821808076
+    },
+    {
+      "name": "upper_edge",
+      "alpha": 0.789350164630338,
+      "memory_step": 3,
+      "joint_step": 4,
+      "extra_wait": 1,
+      "final_memory_gap": 0.001
+    },
+    {
+      "name": "above_upper",
+      "alpha": 0.789360164630338,
+      "memory_step": 3,
+      "joint_step": 4,
+      "extra_wait": 1,
+      "final_memory_gap": 0.0009998575903189988
+    }
+  ],
+  "clock_ticks_per_quarter": 324000,
+  "clock_ticks_per_rotation": 1296000,
+  "conclusion": "First memory-threshold crossing coincides with four-wheel/clock step 4 iff lower <= alpha < upper. Upper boundary itself first crosses at step 3. Below lower, first threshold step 5 and joint step 8.",
+  "limitations": "Discrete model, not physical resonance or Planck-foam measurement."
+}
