@@ -39,7 +39,7 @@ button{font:inherit;font-weight:bold;color:#f5ebdc;background:#24425a;border:2px
 const $=id=>document.getElementById(id);
 const cvs=$("art"),ctx=cvs.getContext("2d"),N=5760,PER=1296000;
 const canonical=[0,1440,2880,4320];
-let order=[0,1,2,3],stepNo=0,clock=0,reads=0,stories=0,auto=false,lastMove=0,tick=0;
+let order=[0,1,2,3],stepNo=0,moves=0,clock=0,reads=0,stories=0,auto=false,lastMove=0,tick=0;
 let fault={coord:false,wave:false,time:false},events=[],invalid=false;
 const chroma=["#fb8066","#f1c45f","#74e7b4","#599ce6"],names=["A","B","C","D"];
 const wl=j=>380+370*j/(N-1),P=()=>order.map(x=>canonical[x]);
@@ -54,11 +54,11 @@ function update(){const coords=P();if(fault.coord)coords[0]=(coords[0]+1)%N;cons
 $("phase").textContent="PHASE "+String(stepNo%4*90).padStart(3,"0")+"°";
 $("time").textContent="TICK "+String((clock+(fault.time?1:0))%PER).padStart(7,"0");
 $("register").textContent=coords.map((j,i)=>names[i]+"  j="+String(j).padStart(4,"0")+"  λ="+labels[i].toFixed(3)+" nm").join("\n")+"\nCHRONOS "+String((clock+(fault.time?1:0))%PER).padStart(7,"0")+"\nMODE  "+(stepNo%2?"5++5":"5--5")+"\nSCALAR 0 → BOX(TOROID)";
-$("cost").textContent=(stepNo+reads*.25).toFixed(2)+" u";
-$("budget").textContent="PERMUTATIONS    "+stepNo+"\nOBSERVATIONS    "+reads+"\nMOVE COST       "+stepNo.toFixed(2)+" u\nWITNESS COST    "+(reads*.25).toFixed(2)+" u\nTOTAL           "+(stepNo+reads*.25).toFixed(2)+" u\nNET DISPLACEMENT (4 steps) = 0";
+$("cost").textContent=(moves+reads*.25).toFixed(2)+" u";
+$("budget").textContent="PERMUTATIONS    "+moves+"\nOBSERVATIONS    "+reads+"\nMOVE COST       "+moves.toFixed(2)+" u\nWITNESS COST    "+(reads*.25).toFixed(2)+" u\nTOTAL           "+(moves+reads*.25).toFixed(2)+" u\nNET DISPLACEMENT (4 steps) = 0";
 validate();}
-function forward(){order=[order[3],order[0],order[1],order[2]];stepNo++;clock=(clock+324000)%PER;record("TRANSPORT","clock +324000; wheel order "+order.join(""));update();}
-function reverse(){order=[order[1],order[2],order[3],order[0]];stepNo=Math.max(0,stepNo-1);clock=(clock+PER-324000)%PER;record("REVERSE","inverse wheel rotation");update();}
+function forward(){order=[order[3],order[0],order[1],order[2]];stepNo++;moves++;clock=(clock+324000)%PER;record("TRANSPORT","clock +324000; wheel order "+order.join(""));update();}
+function reverse(){order=[order[1],order[2],order[3],order[0]];stepNo--;moves++;clock=(clock+PER-324000)%PER;record("REVERSE","inverse wheel rotation");update();}
 const chapters=[
 ["THE EMBEDDED PIN","A rock embedded in its streambed makes the flow turn around it. The box is the local coordinate frame; the toroid captures the modeled circulating route."],
 ["THE COSMIC STREAM","Earth is our voxel in a bigger pond. The Sun is one reference vector and the galaxy another. Nib/Nib Sun remain hypothetical steps, not verified celestial objects."],
@@ -85,7 +85,7 @@ checks["coordinate corruption visible"]=(canonical[0]+1)!==canonical[0];
 checks["spectral swap visible"]=wl(canonical[0])!==wl(canonical[1]);
 checks["clock fault visible"]=(clock+1)%PER!==clock;
 checks["conserved coordinate multiset"]=JSON.stringify([...a].sort())===JSON.stringify([0,1,2,3]);
-checks["nonnegative cost"]=(stepNo+reads*.25)>=0;
+checks["nonnegative cost"]=(moves+reads*.25)>=0;
 checks["Gibson sequence monotonic"]=events.every((e,i)=>e.seq===i+1);
 const pass=Object.values(checks).filter(Boolean).length;$("testResult").textContent="TEST "+pass+"/"+Object.keys(checks).length+(pass===Object.keys(checks).length?" PASS":" FAIL");
 record("TEST","B225 "+pass+"/"+Object.keys(checks).length+"; "+(pass===15?"PASS":"FAIL"));reads++;update();}
@@ -106,7 +106,7 @@ if(invalid){px(11,12,102,14,"#5d2437");ctx.fillStyle="#ffd5cf";ctx.font="9px mon
 if(auto&&tick-lastMove>100){lastMove=tick;forward();}
 requestAnimationFrame(frame);}
 $("step").onclick=forward;$("cycle").onclick=()=>{for(let i=0;i<4;i++)forward();scan()};$("back").onclick=reverse;$("auto").onclick=()=>{auto=!auto;$("auto").textContent=auto?"❚❚ PAUSE":"▶ ANIMATE";lastMove=tick;record("PLAY",auto?"animation started":"animation paused");};
-$("reset").onclick=()=>{order=[0,1,2,3];stepNo=0;clock=0;reads=0;fault={coord:false,wave:false,time:false};record("RESET","new initial state; session log preserved");update()};
+$("reset").onclick=()=>{order=[0,1,2,3];stepNo=0;moves=0;clock=0;reads=0;fault={coord:false,wave:false,time:false};record("RESET","new initial state; session log preserved");update()};
 $("prevStory").onclick=()=>story(-1);$("nextStory").onclick=()=>story(1);$("test").onclick=tests;
 $("badcoord").onclick=()=>patch("coord");$("badwave").onclick=()=>patch("wave");$("badtime").onclick=()=>patch("time");
 $("fix").onclick=()=>{fault={coord:false,wave:false,time:false};record("FAULT","cleared");update()};
