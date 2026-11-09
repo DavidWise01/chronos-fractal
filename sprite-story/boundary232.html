@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09101c"><title>CHRONOS 232 · The Return Window</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#263956,#090d19 75%);color:#ecf4eb;font:13px/1.5 ui-monospace,Consolas,monospace}
+main{max-width:1230px;margin:auto;padding:15px}h1{font-size:clamp(24px,3.5vw,38px);margin:5px 0;color:#ffdc89;text-shadow:3px 3px #593947}h2{color:#ffda8d;margin:6px 0 12px}.eyebrow{color:#9cf8dc;letter-spacing:.15em;font-size:11px}
+.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(310px,1fr);gap:13px}.panel{background:#121b2c;border:2px solid #42556c;padding:14px;box-shadow:4px 4px #070b14}
+.screen{aspect-ratio:16/10;position:relative;background:#060b17;border:3px solid #07111a}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}.screen:after{position:absolute;inset:0;content:"";pointer-events:none;opacity:.13;background:repeating-linear-gradient(transparent 0 3px,#050514 4px 5px)}
+button{font:700 12px monospace;color:#f1f8ec;background:#20445b;border:2px solid #5c8796;padding:9px 11px;cursor:pointer}button:hover,button:focus-visible{background:#377084;outline:2px solid #adffe5}.primary{background:#9d5f40;border-color:#f3b782}
+.buttons{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.metric{background:#081424;border:1px solid #365567;padding:10px}.metric span{font-size:10px;color:#bacbd1}.metric b{display:block;color:#ffdc96;font-size:clamp(14px,2.2vw,23px)}
+label{color:#b8dddc;display:block;margin:12px 0 5px}input[type=range]{width:100%;accent-color:#88edcf}.code{white-space:pre-wrap;background:#091322;border:1px solid #355467;padding:12px;color:#bcf2da;min-height:100px}.badge{display:inline-block;background:#102b38;color:#aeffdb;border:1px solid #34746e;margin:4px 4px 4px 0;padding:5px 8px;font-size:11px}
+.lower{margin-top:13px;display:grid;grid-template-columns:1fr 1fr;gap:13px}.log{max-height:190px;min-height:120px;overflow:auto;background:#081120;padding:9px;border:1px solid #375267;font-size:11px}.log div{margin:3px 0}.dim{color:#aec2cf}a{color:#a2f2e0}.footer{font-size:11px;color:#b9c7d1;margin:17px 0}p{margin:9px 0}@media(max-width:800px){.grid,.lower{grid-template-columns:1fr}main{padding:8px}}
+</style></head><body><main><div class="eyebrow">ROOT0 / CHRONOS / PIXEL CHRONICLE / BOUNDARY 232</div><h1>THE RETURN WINDOW</h1>
+<p class="dim">One embedded primitive · Four Chrome coordinate/wavelength wheels · Six zero anchors · Five nested levels · One CHRONOS clock.</p>
+<div class="grid"><section class="panel"><div class="screen"><canvas id="art" width="384" height="240" aria-label="Pixel sprite visualization of four chromatic wheels around an embedded rock, with an adaptation-rate gate window"></canvas></div>
+<div class="metrics"><div class="metric"><span>MEMORY FIRST READY</span><b id="memoryStep">4</b></div><div class="metric"><span>FULL CHROME RETURN</span><b id="jointStep">4</b></div><div class="metric"><span>EXTRA WAIT</span><b id="waitStep">0</b></div></div>
+<div><span class="badge" id="state">GATE ALIGNED</span><span class="badge" id="tick">1,296,000 ticks</span><span class="badge">B232 / 48 TESTS</span></div>
+<div class="buttons"><button class="primary" id="go">▶ RUN TO RETURN</button><button id="auto">▶ AUTO</button><button id="step">STEP</button><button id="reset">↺ RESET</button></div></section>
+<aside class="panel"><div class="eyebrow">ADAPTATION CONTROLS</div><h2>The window has edges</h2><label for="rate">Memory adaptation rate α</label><input id="rate" type="range" min="0.50" max="0.95" step="0.0001" value="0.75"><div class="code" id="formula"></div>
+<div class="buttons"><button id="below">BELOW LOWER</button><button id="lower">LOWER EDGE</button><button id="inside">75% INSIDE</button><button id="upper">UPPER EDGE</button><button id="above">ABOVE UPPER</button></div>
+<p><b>Lower included:</b> the fourth step is exactly sufficient. <b>Upper excluded:</b> memory crosses on step three, so first recovery no longer aligns with the fourth-step wheel closure.</p>
+<div class="eyebrow">THE SPRITE STORY</div><h2 id="chapter">The Embedded Rock</h2><p id="story">The stream circles an embedded pin. Four Chrome wheels orbit in a fixed cyclic permutation. A wheel can be home even when its retained-motion memory is not.</p><div class="buttons"><button id="prev">◀ STORY</button><button id="next">STORY ▶</button></div></aside></div>
+<div class="lower"><section class="panel"><div class="eyebrow">TRUE RETURN WITNESS</div><h2>Same memory gate, same clock</h2><p>To count as a simultaneous first crossing, memory enters tolerance for the first time exactly when the four ordered wheel coordinates return after one complete cycle.</p>
+<div class="code" id="register"></div><div class="buttons"><button id="verify" class="primary">RUN B232 TEST</button><button id="badClock">+1 TICK</button><button id="badWave">SWAP λ</button><button id="badCoord">SHIFT COORD</button><button id="clear">CLEAR FAULTS</button></div><span class="badge" id="testStatus">TEST NOT RUN</span><span class="badge" id="faultStatus">WITNESS ALIGNED</span></section>
+<section class="panel"><div class="eyebrow">GIBSON @ / APPEND-ONLY SESSION</div><h2>Boundary witnesses</h2><div class="log" id="ledger" role="log" aria-live="polite"></div><div class="buttons"><button id="export">EXPORT GIBSON JSONL</button></div>
+<p class="dim">Tolerance is fixed at 0.001 normalized units. This is a mathematical discrete relaxation model, not physical resonance, inertia, Planck-scale foam, or free energy.</p></section></div>
+<footer class="footer"><a href="./boundary231.html">◀ B231 RETURN GATE</a> · <a href="./">PIXEL CHRONICLE</a> · <a href="../">ORIGINAL CHRONOS</a> · <a href="../experiments/boundary232/results.json">B232 RESULTS</a> · <a href="https://github.com/DavidWise01/chronos-fractal">GITHUB</a><p>David Lee Wise / ROOT0 · Chrome coordinates, wavelength and color are mapped labels; visual sprites are illustrative.</p></footer></main>
+<script>
+(()=>{"use strict";
+const $=x=>document.getElementById(x),ctx=$("art").getContext("2d"),G=.65-.543016542866826,TOL=.001,Q=324000,PER=1296000,LOWER=1-(TOL/G)**.25,UPPER=1-(TOL/G)**(1/3),BASE=[0,1440,2880,4320],C=["#ff916b","#ffd27c","#82eec3","#81acff"];
+const lambda=j=>380+370*j/5759;
+let alpha=.75,step=0,m=.543016542866826,order=[0,1,2,3],animFrame=0,last=0,autoplay=false,scene=0,errors={clock:false,wave:false,coord:false};const events=[];
+const stories=[
+["The Embedded Rock","The stream circles an embedded pin. Four Chrome wheels orbit in a fixed cyclic permutation. A wheel can be home even when its retained-motion memory is not."],
+["Four Chrome Coordinates","A, B, C, and D carry coordinate and wavelength labels. They move to different positions but keep their encoded identities."],
+["The Memory Equation","Retained motion follows m_next=(1-α)m+α×0.65. We start from the same gap and vary only the response rate."],
+["The Lower Boundary","At 68.9064% adaptation, the fourth step barely reaches the observer's 0.001 memory tolerance."],
+["Just Below","An infinitesimally lower rate misses step four. Memory first fits on step five; the full return waits until step eight."],
+["Inside the Window","At 75%, memory first fits on step four, precisely when all four Chrome wheels and the clock close."],
+["The Upper Boundary","At 78.9350%, memory first fits on step three. The clock still closes at step four, but the first crossing is earlier."],
+["Gibson Remembers","Preserve both boundary edges, individual state changes, spectral mappings, clock ticks, and witnesses. The mathematical window is not physical resonance."]
+];
+function gate(a){let k=0,g=G;while(g>TOL&&k<10000){k++;g*=1-a}return {memory:k,joint:4*Math.ceil(k/4),gap:g}}
+function log(type,detail){const e={boundary:232,seq:events.length+1,type,step,alpha,tick:step*Q,memory:m,detail};events.push(e);let d=document.createElement("div");d.textContent=String(e.seq).padStart(3,"0")+" / "+type+" / "+detail;$("ledger").append(d);$("ledger").scrollTop=$("ledger").scrollHeight}
+function shown(){let coords=order.map(i=>BASE[i]);if(errors.coord)coords[0]=(coords[0]+1)%5760;let waves=order.map(i=>lambda(BASE[i]));if(errors.wave)[waves[0],waves[1]]=[waves[1],waves[0]];let broken=[];coords.forEach((j,i)=>{if(Math.abs(lambda(j)-waves[i])>1e-8)broken.push("CHROME "+i)});if(errors.clock)broken.push("CLOCK +1");return {coords,waves,broken}}
+function update(){const q=gate(alpha),s=shown(),gap=Math.abs(.65-m),aligned=q.memory===4;
+$("memoryStep").textContent=q.memory;$("jointStep").textContent=q.joint;$("waitStep").textContent=q.joint-q.memory;
+$("state").textContent=aligned?"FIRST GATE ALIGNED":alpha<LOWER?"BELOW WINDOW / STEP 8":"ABOVE WINDOW / EARLY MEMORY";
+$("tick").textContent=(q.joint*Q).toLocaleString()+" ticks";
+$("formula").textContent="α = "+(alpha*100).toFixed(7)+"%\nLOWER INCLUSIVE = "+(LOWER*100).toFixed(7)+"%\nUPPER EXCLUSIVE = "+(UPPER*100).toFixed(7)+"%\n\nMEMORY GATE: step "+q.memory+"\nPHASE GATE: step "+q.joint+"\nCURRENT GAP: "+gap.toFixed(9);
+$("register").textContent=s.coords.map((j,i)=>"ABCD"[i]+"  "+String(j).padStart(4,"0")+"    λ "+s.waves[i].toFixed(3)+" nm").join("\n")+"\nCHRONOS "+String((step*Q+(errors.clock?1:0))%PER).padStart(7,"0")+"\nMEMORY "+m.toFixed(9)+"\nMEMORY TOLERANCE "+TOL+"\nWHEEL PHASE "+(step%4*90)+"°";
+$("faultStatus").textContent=s.broken.length?"FALSE CLOSURE "+s.broken.join(" / "):"WITNESS ALIGNED";
+$("rate").value=String(Math.max(.5,Math.min(.95,alpha)));
+}
+function changeRate(a){alpha=Math.min(1,Math.max(0,a));reset();log("ADAPTATION","rate "+(alpha*100).toFixed(8)+"%");update()}
+function advance(){let q=gate(alpha);if(step>=Math.max(q.joint,8)+4){autoplay=false;$("auto").textContent="▶ AUTO";return}m=(1-alpha)*m+alpha*.65;order=[order[3],order[0],order[1],order[2]];step++;log("STEP","gap "+Math.abs(.65-m).toFixed(9));if(step===q.memory)log("MEMORY","first threshold crossing");if(step===q.joint)log("PHASE","first full return");update()}
+function reset(){step=0;m=.543016542866826;order=[0,1,2,3];errors={clock:false,wave:false,coord:false};autoplay=false;$("auto").textContent="▶ AUTO";log("RESET","new attempt; witnesses retained");update()}
+function travel(n){if(n<step)reset();while(step<n)advance()}
+const px=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x|0,y|0,w|0,h|0)};
+function draw(){animFrame++;px(0,0,384,240,"#081024");for(let i=0;i<80;i++)px(i*103%384,i*61%240,1,1,"#2c4264");for(let k=0;k<5;k++){let d=k*10;ctx.strokeStyle=["#354c68","#467391","#5c9d9f","#9ebf9c","#e9c789"][k];ctx.lineWidth=2;ctx.strokeRect(21+d,17+d,342-2*d,207-2*d)}
+for(let i=0;i<55;i++){let x=(i*35+animFrame*1.4)%425-20,y=26+i*29%183;if(x>133&&x<251&&y>92&&y<158)continue;px(x,y,12,2,"#2584a3")}
+for(let i=0;i<12;i++){let a=i*Math.PI/6-Math.PI/2;px(192+97*Math.cos(a)-3,116+73*Math.sin(a)-3,6,6,i<6?"#68dec4":"#ecb17a")}
+const spots=[[118,73],[267,73],[267,164],[118,164]];spots.forEach(([x,y],i)=>{let q=order[i];for(let k=0;k<16;k++){let a=k*Math.PI/8+animFrame*.014;px(x+Math.cos(a)*22-2,y+Math.sin(a)*22-2,5,5,C[(k+q)%4])}px(x-5,y-5,10,10,"#10263b");px(x-3,y-3,6,6,C[q]);ctx.font="9px monospace";ctx.fillStyle="#ffe5b6";ctx.fillText("ABCD"[q],x-3,y+3)});
+ctx.strokeStyle="#ffd78d";ctx.beginPath();ctx.ellipse(192,116,44,32,0,0,Math.PI*2);ctx.stroke();px(182,104,20,27,"#253649");px(187,101,11,13,"#d2b68b");px(190,114,5,13,"#ffe39b");
+px(8,8,147,14,"#10293b");ctx.font="9px monospace";ctx.fillStyle="#bdfce3";ctx.fillText("B232 / RETURN WINDOW",14,18);let q=gate(alpha),yes=q.memory===4;px(192,211,181,17,yes?"#1b513d":"#503947");ctx.fillStyle=yes?"#bbffd7":"#ffbfba";ctx.fillText(yes?"FIRST GATES ALIGN":"MISSED FIRST GATE",201,223);
+if(errors.clock||errors.coord||errors.wave){px(263,8,109,14,"#662238");ctx.fillStyle="#ffe3cf";ctx.fillText("FAULT DETECTED",267,18)}if(autoplay&&animFrame-last>75){last=animFrame;advance()}requestAnimationFrame(draw)}
+$("rate").oninput=x=>changeRate(Number(x.target.value));$("below").onclick=()=>changeRate(LOWER-.00001);$("lower").onclick=()=>changeRate(LOWER);$("inside").onclick=()=>changeRate(.75);$("upper").onclick=()=>changeRate(UPPER);$("above").onclick=()=>changeRate(UPPER+.00001);
+$("go").onclick=()=>travel(gate(alpha).joint);$("step").onclick=advance;$("auto").onclick=()=>{autoplay=!autoplay;last=animFrame;$("auto").textContent=autoplay?"❚❚ PAUSE":"▶ AUTO";log("PLAY",autoplay?"started":"paused")};$("reset").onclick=reset;
+function tell(d){scene=(scene+d+stories.length)%stories.length;$("chapter").textContent=stories[scene][0];$("story").textContent=stories[scene][1];log("STORY",stories[scene][0])}$("prev").onclick=()=>tell(-1);$("next").onclick=()=>tell(1);
+function toggle(k){errors[k]=!errors[k];log("FAULT",k+" "+errors[k]);update()}$("badClock").onclick=()=>toggle("clock");$("badWave").onclick=()=>toggle("wave");$("badCoord").onclick=()=>toggle("coord");$("clear").onclick=()=>{errors={clock:false,wave:false,coord:false};log("FAULT","cleared");update()};
+$("verify").onclick=()=>{const near=[LOWER-.00001,LOWER,.75,UPPER-.00001,UPPER,UPPER+.00001].map(gate),expected=[5,4,4,4,3,3];let passes=near.reduce((sum,r,i)=>sum+(r.memory===expected[i]?1:0),0);let sweep=[...Array(1001)].every((_,i)=>{let a=i/1000;return (gate(a).memory===4)===(a>=LOWER&&a<UPPER)});$("testStatus").textContent="B232 BROWSER "+(passes+(sweep?1:0))+"/7 "+(passes===6&&sweep?"PASS":"FAIL");log("TEST",$("testStatus").textContent)};
+$("export").onclick=()=>{let str=events.map(x=>JSON.stringify(x)).join("\n")+"\n",u=URL.createObjectURL(new Blob([str],{type:"application/x-ndjson"})),a=document.createElement("a");a.href=u;a.download="chronos-gibson-boundary232.jsonl";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+log("INIT","B232 analytical gate window initialized");update();draw();
+})();
+</script></body></html>
