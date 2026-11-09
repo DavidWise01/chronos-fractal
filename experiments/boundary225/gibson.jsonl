@@ -1,0 +1,8 @@
+{"boundary":225,"seq":1,"type":"baseline","outcome":"identity restored"}
+{"boundary":225,"seq":2,"type":"wheel_permutation","outcome":"four rotations restored order"}
+{"boundary":225,"seq":3,"type":"coordinate_fault","outcome":"coordinate and derived wavelength mismatch"}
+{"boundary":225,"seq":4,"type":"wavelength_swap","outcome":"wavelength alone mismatch"}
+{"boundary":225,"seq":5,"type":"clock_fault","outcome":"one-tick mismatch"}
+{"boundary":225,"seq":6,"type":"mode_fault","outcome":"contraction/expansion mismatch"}
+{"boundary":225,"seq":7,"type":"recursive_address_fault","outcome":"level address mismatch"}
+{"boundary":225,"seq":8,"type":"recovered","outcome":"all identity fields restored"}
