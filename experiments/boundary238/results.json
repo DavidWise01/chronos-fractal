@@ -1,0 +1,360 @@
+{
+  "boundary": 238,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 61,
+  "checks_total": 61,
+  "scenario": "slow rate for steps 1–4, then either hold the slow rate or restore to midpoint without clearing retained memory",
+  "initial_gap": 0.10698345713317403,
+  "threshold": 0.001,
+  "slow_rate": 0.68840272627303,
+  "corrected_rate": 0.7387707922453981,
+  "passive_history": [
+    {
+      "step": 1,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.03333575357658319,
+      "within_tolerance": false,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.01038732993209741,
+      "within_tolerance": false,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.0032366636881441054,
+      "within_tolerance": false,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.001008535581196783,
+      "within_tolerance": false,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": false
+    },
+    {
+      "step": 5,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.0003142569375575628,
+      "within_tolerance": true,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.00009792160499272321,
+      "within_tolerance": true,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.000030512105154701805,
+      "within_tolerance": true,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.00000950748878187571,
+      "within_tolerance": true,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": true
+    },
+    {
+      "step": 9,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.000002962507584422222,
+      "within_tolerance": true,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "effective_rate": 0.68840272627303,
+      "gap": 9.231092867014358e-7,
+      "within_tolerance": true,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "effective_rate": 0.68840272627303,
+      "gap": 2.876383370882153e-7,
+      "within_tolerance": true,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "effective_rate": 0.68840272627303,
+      "gap": 8.96273216560471e-8,
+      "within_tolerance": true,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": true
+    }
+  ],
+  "corrected_history": [
+    {
+      "step": 1,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.03333575357658319,
+      "within_tolerance": false,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.01038732993209741,
+      "within_tolerance": false,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.0032366636881441054,
+      "within_tolerance": false,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "effective_rate": 0.68840272627303,
+      "gap": 0.001008535581196783,
+      "within_tolerance": false,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": false
+    },
+    {
+      "step": 5,
+      "effective_rate": 0.7387707922453981,
+      "gap": 0.0002634589508683626,
+      "within_tolerance": true,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "effective_rate": 0.7387707922453981,
+      "gap": 0.00006882317301120095,
+      "within_tolerance": true,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "effective_rate": 0.7387707922453981,
+      "gap": 0.000017978622960873922,
+      "within_tolerance": true,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "effective_rate": 0.7387707922453981,
+      "gap": 0.000004696541432587789,
+      "within_tolerance": true,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": true
+    },
+    {
+      "step": 9,
+      "effective_rate": 0.7387707922453981,
+      "gap": 0.0000012268737976215712,
+      "within_tolerance": true,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock_tick": 324000,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "effective_rate": 0.7387707922453981,
+      "gap": 3.2049527016756285e-7,
+      "within_tolerance": true,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock_tick": 648000,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "effective_rate": 0.7387707922453981,
+      "gap": 8.372272551496955e-8,
+      "within_tolerance": true,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock_tick": 972000,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "effective_rate": 0.7387707922453981,
+      "gap": 2.1870821257331488e-8,
+      "within_tolerance": true,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock_tick": 0,
+      "full_return": true
+    }
+  ],
+  "first_memory_step_passive": 5,
+  "first_memory_step_corrected": 5,
+  "first_full_return_passive": 8,
+  "first_full_return_corrected": 8,
+  "additional_chronos_ticks_either": 1296000,
+  "passive_gap_at8": 0.00000950748878187571,
+  "corrected_gap_at8": 0.000004696541432587789,
+  "interpretation": "Correction improves residual-state precision, but not return-gate timing for this perturbation. This does not imply no intervention would be needed in another model."
+}
