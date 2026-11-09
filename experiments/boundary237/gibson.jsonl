@@ -1,0 +1,5 @@
+{"boundary":237,"seq":1,"event":"slow_breach","effective_rate":0.68840272627303,"step":4,"memory_gap":0.001008535581196783,"clock":0,"accepted":false}
+{"boundary":237,"seq":2,"event":"correction_applied","effective_rate":0.7387707922453981,"step":4,"memory_gap":0.001008535581196783,"history_reset":false}
+{"boundary":237,"seq":3,"event":"memory_threshold_restored","effective_rate":0.7387707922453981,"step":5,"memory_gap":0.0002634589508683626,"clock":324000,"accepted":false}
+{"boundary":237,"seq":4,"event":"first_full_return","effective_rate":0.7387707922453981,"step":8,"memory_gap":0.000004696541432587789,"clock":0,"accepted":true}
+{"boundary":237,"seq":5,"event":"fast_breach_distinction","effective_rate":0.7908288582177663,"first_memory_step":3,"first_full_step":4,"note":"early crossing not full tolerance failure"}
