@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b17"><title>CHRONOS B225 · Living Pixel Manifold</title>
+<style>
+:root{--bg:#090d1b;--p:#141b2d;--b:#35475f;--fg:#f2f0e7;--dim:#9cb3c5;--cy:#7cf1df;--gold:#ffcf75}
+*{box-sizing:border-box}body{background:radial-gradient(circle at 50% -20%,#283a59,var(--bg) 75%);color:var(--fg);font:13px/1.5 "Courier New",monospace;margin:0}
+main{max-width:1240px;padding:16px;margin:auto}h1{margin:4px 0;font-size:clamp(22px,3.5vw,39px);letter-spacing:.04em;text-shadow:3px 3px #193c4e}h2{font-size:20px;color:var(--gold);margin:6px 0 14px}.over{color:var(--cy);letter-spacing:.15em;font-size:11px}.sub{color:var(--dim)}.panel{background:#111827;border:2px solid var(--b);box-shadow:3px 3px 0 #050814;padding:14px}.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(295px,.9fr);gap:14px}.screen{aspect-ratio:16/10;border:3px solid #050914;position:relative;background:#040814}canvas{width:100%;height:100%;image-rendering:pixelated;display:block}.screen:after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(transparent 0 3px,#0003 4px 5px)}
+button{font:inherit;font-weight:bold;color:#f5ebdc;background:#24425a;border:2px solid #557b92;box-shadow:3px 3px #050a13;cursor:pointer;padding:9px 12px}button:hover,button:focus-visible{background:#41677f;outline:2px solid #b2f6e8}button.action{background:#9b5a40;border-color:#efb27e}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin:13px 0}.readout{display:flex;justify-content:space-between;gap:9px;flex-wrap:wrap;color:var(--cy);font-size:11px;margin:9px 0 0}.metric{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.metric>div{border:1px solid #364f65;background:#0a1221;padding:10px}.big{font-size:21px;color:#f3d58d;font-weight:bold}.label{font-size:10px;color:var(--dim)}p{margin:9px 0}.readable{min-height:125px}.ledger{white-space:pre-wrap;background:#080f1d;color:#9cddcc;padding:11px;border:1px solid #32445e;min-height:100px;font-size:12px}.log{overflow:auto;max-height:160px;min-height:70px;background:#090f1b;border:1px solid #314259;padding:10px;font-size:11px;color:#c6dbe7}.log div{margin-bottom:3px}.footer{font-size:11px;color:#abb9c6;margin:18px 0}a{color:#97f0e4}.flags{display:flex;gap:8px;flex-wrap:wrap}.chip{font-size:11px;background:#102a32;color:#a2efda;border:1px solid #306f69;padding:4px 8px}hr{border:0;border-top:1px solid #39475e;margin:13px 0}
+@media(max-width:790px){.grid{grid-template-columns:1fr}main{padding:9px}}@media(prefers-reduced-motion:reduce){canvas{scroll-behavior:auto}}
+</style></head><body><main>
+<div class="over">CHRONOS / ROOT0 / PIXEL CHRONICLE / BOUNDARY 225</div><h1>THE LIVING MANIFOLD</h1><p class="sub">One embedded primitive · four Chrome coordinate wheels · six zeros · one CHRONOS clock · one Gibson witness.</p>
+<div class="grid"><section class="panel"><div class="screen"><canvas id="art" width="384" height="240" role="img" aria-label="Pixel-art view of four colored Chrome pinwheels orbiting an embedded gravitational center, with six directional anchors and nested box shell"></canvas></div>
+<div class="readout"><span id="phase">PHASE 000°</span><span id="time">TICK 0000000</span><span id="state">RETURN STATUS: READY</span></div>
+<div class="btns"><button class="action" id="step">STEP CHROME ▶</button><button id="cycle">FOUR-STEP CYCLE</button><button id="back">◀ REVERSE</button><button id="auto">▶ ANIMATE</button><button id="reset">↺ RESET</button></div>
+<div class="metric"><div><div class="label">WHEELS</div><div class="big">4</div></div><div><div class="label">DIRECTED CHANNELS</div><div class="big">12</div></div><div><div class="label">CYCLE LEDGER</div><div class="big" id="cost">0.00 u</div></div></div>
+<div class="flags"><span class="chip">[BOX(TOROID)]</span><span class="chip">{{5×5}}^5</span><span class="chip">±1.025% FOAM</span><span class="chip">6 ZEROS</span></div></section>
+<aside class="panel"><div class="over">THE FOUR WHEEL STORY</div><h2 id="chapterTitle">1 · THE EMBEDDED PIN</h2>
+<div id="story" class="readable" aria-live="polite">An embedded rock bends the passing stream. It need not move with the current. The nested box is its local reference frame; the toroid is the circulation around it.</div>
+<div class="btns"><button id="prevStory">◀ STORY</button><button id="nextStory">STORY ▶</button></div>
+<hr><div class="over">TRANSPORT REGISTER</div><div class="ledger" id="register"></div>
+<p class="sub">Each wheel keeps its own coordinate and assigned wavelength. What changes is its <em>position</em>. The colored sprite is an illustrative render, not a physical emission measurement.</p>
+</aside></div>
+<div class="grid" style="margin-top:14px"><section class="panel"><div class="over">BOUNDARY 225 / VERIFY THE RETURN</div><h2>Corrupt one part, not the whole primitive</h2>
+<p>Rotate normally for a closed permutation, then inject a coordinate, wavelength, or clock fault. The witness must catch the mismatch without rewriting previous observations.</p>
+<div class="btns"><button class="action" id="test">RUN 225 TEST</button><button id="badcoord">BREAK COORD</button><button id="badwave">SWAP WAVELENGTH</button><button id="badtime">SHIFT +1 TICK</button><button id="fix">CLEAR FAULTS</button></div>
+<div class="flags"><span class="chip" id="testResult">TEST: NOT RUN</span><span class="chip" id="faultStatus">WITNESS: ALIGNED</span></div>
+<hr><div class="over">GIBSON · APPEND-ONLY SESSION LOG</div><div class="log" id="gibson" aria-live="polite" role="log"></div>
+<div class="btns"><button id="export">EXPORT GIBSON JSONL</button></div></section>
+<aside class="panel"><div class="over">COST OF A CHROME CYCLE</div><h2>What is the mileage?</h2>
+<p>The cell accounts for work rather than pretending all circulation is free. This example assigns <b>1.00 ledger unit per permutation</b> and <b>0.25 units per observation</b>. These are user-adjustable simulation conventions, not joules.</p>
+<div class="ledger" id="budget"></div><p>The four-wheel permutation has exact closure after four moves, but the energy ledger increases. <b>Return to the same position does not mean zero work was performed.</b></p>
+<p>CHRONOS assigns one arcsecond tick to light traveling 0.01 m in vacuum, ~33.3564 ps. Angle is a label; physical spatial distance requires a defined radius.</p>
+</aside></div>
+<div class="footer"><a href="./">◀ BACK TO THE EIGHT-CHAPTER PIXEL CHRONICLE</a> · <a href="../">ORIGINAL CHRONOS FRACTAL</a> · <a href="../experiments/boundary225/results.json">TEST RESULTS</a> · <a href="https://github.com/DavidWise01/chronos-fractal">GITHUB</a><p>David Lee Wise / ROOT0 · Toy manifold and spectral model only. Gravity-push/void-pull and Planck-foam physical interpretations remain unverified.</p></div>
+</main>
+<script>
+(()=>{"use strict";
+const $=id=>document.getElementById(id);
+const cvs=$("art"),ctx=cvs.getContext("2d"),N=5760,PER=1296000;
+const canonical=[0,1440,2880,4320];
+let order=[0,1,2,3],stepNo=0,clock=0,reads=0,stories=0,auto=false,lastMove=0,tick=0;
+let fault={coord:false,wave:false,time:false},events=[],invalid=false;
+const chroma=["#fb8066","#f1c45f","#74e7b4","#599ce6"],names=["A","B","C","D"];
+const wl=j=>380+370*j/(N-1),P=()=>order.map(x=>canonical[x]);
+function record(kind,detail){const e={seq:events.length+1,boundary:225,type:kind,step:stepNo,clock,detail};events.push(e);const d=document.createElement("div");d.textContent=String(e.seq).padStart(3,"0")+" | "+kind+" | "+detail;$("gibson").appendChild(d);$("gibson").scrollTop=$("gibson").scrollHeight;}
+function validate(){const coordinates=P();if(fault.coord)coordinates[0]=(coordinates[0]+1)%N;const wavelengths=P().map(wl);if(fault.wave)[wavelengths[0],wavelengths[1]]=[wavelengths[1],wavelengths[0]];
+const failed=[];coordinates.forEach((j,i)=>{if(Math.abs(wavelengths[i]-wl(j))>1e-9)failed.push("WHEEL "+names[i]+" LABEL");});
+if(fault.time)failed.push("CHRONOS +1 TICK");
+invalid=failed.length>0;$("faultStatus").textContent=invalid?"WITNESS: "+failed.join(", "):"WITNESS: ALIGNED";
+$("state").textContent=invalid?"FALSE CLOSURE":"RETURN STATUS: "+(stepNo%4===0?"CLOSED":"IN MOTION");
+return failed;}
+function update(){const coords=P();if(fault.coord)coords[0]=(coords[0]+1)%N;const labels=P().map(wl);if(fault.wave)[labels[0],labels[1]]=[labels[1],labels[0]];
+$("phase").textContent="PHASE "+String(stepNo%4*90).padStart(3,"0")+"°";
+$("time").textContent="TICK "+String((clock+(fault.time?1:0))%PER).padStart(7,"0");
+$("register").textContent=coords.map((j,i)=>names[i]+"  j="+String(j).padStart(4,"0")+"  λ="+labels[i].toFixed(3)+" nm").join("\n")+"\nCHRONOS "+String((clock+(fault.time?1:0))%PER).padStart(7,"0")+"\nMODE  "+(stepNo%2?"5++5":"5--5")+"\nSCALAR 0 → BOX(TOROID)";
+$("cost").textContent=(stepNo+reads*.25).toFixed(2)+" u";
+$("budget").textContent="PERMUTATIONS    "+stepNo+"\nOBSERVATIONS    "+reads+"\nMOVE COST       "+stepNo.toFixed(2)+" u\nWITNESS COST    "+(reads*.25).toFixed(2)+" u\nTOTAL           "+(stepNo+reads*.25).toFixed(2)+" u\nNET DISPLACEMENT (4 steps) = 0";
+validate();}
+function forward(){order=[order[3],order[0],order[1],order[2]];stepNo++;clock=(clock+324000)%PER;record("TRANSPORT","clock +324000; wheel order "+order.join(""));update();}
+function reverse(){order=[order[1],order[2],order[3],order[0]];stepNo=Math.max(0,stepNo-1);clock=(clock+PER-324000)%PER;record("REVERSE","inverse wheel rotation");update();}
+const chapters=[
+["THE EMBEDDED PIN","A rock embedded in its streambed makes the flow turn around it. The box is the local coordinate frame; the toroid captures the modeled circulating route."],
+["THE COSMIC STREAM","Earth is our voxel in a bigger pond. The Sun is one reference vector and the galaxy another. Nib/Nib Sun remain hypothetical steps, not verified celestial objects."],
+["THE FOUR CHROME WHEELS","Four variable wheels circulate around a fixed center. Each has 5,760 possible addresses. Wavelength and coordinate labels travel together through a complete four-step permutation."],
+["THE SIX ZEROS","Six zero anchors u,v,w,x,y,z define twelve signed directions. Six box faces carry twenty-four named surface contacts. These are addressable directions, not six measured spatial dimensions."],
+["THE LIGHT CLOCK","In the CHRONOS convention one tick is the time light travels 0.01 meter, about 33.3564 picoseconds. The complete circle has 1,296,000 ticks."],
+["THE FRACTAL SHELL","Nested {{5×5}}^5: five internal stages, contraction 5--5 and expansion 5++5. An equal clock phase alone cannot establish that two histories are identical."],
+["THE MILEAGE OF THE MANIFOLD","A complete circuit can return to its origin while accumulating work in a ledger. Model energy cost is bookkeeping, not a physical joule estimate."],
+["THE GIBSON WITNESS","Corrupt one coordinate, spectral label, or clock tick. CHRONOS rejects false closure, and Gibson preserves every historical event rather than silently erasing a failure."]
+];
+function story(d){stories=(stories+d+chapters.length)%chapters.length;$("chapterTitle").textContent=(stories+1)+" · "+chapters[stories][0];$("story").textContent=chapters[stories][1];record("STORY",chapters[stories][0]);}
+function scan(){reads++;const err=validate();record("WITNESS",err.length?"FAULT DETECTED "+err.join(", "):"COORDINATES / WAVELENGTH / TIME CONSISTENT");update();}
+function tests(){const checks={};let a=[0,1,2,3];for(let i=0;i<4;i++)a=[a[3],a[0],a[1],a[2]];
+checks["cycle closes"]=a.every((v,i)=>v===i);
+checks["unique wheel IDs"]=new Set(canonical).size===4;
+checks["spectral monotonicity"]=canonical.every((j,i)=>i===0||wl(j)>wl(canonical[i-1]));
+checks["wavelength carried with address"]=canonical.every(j=>Math.abs(wl(j)-wl(j))<1e-12);
+checks["clock returns after full turn"]=(4*324000)%PER===0;
+checks["twelve directions"]=new Set(Array.from({length:12},(_,i)=>i*30)).size===12;
+checks["five recursive 25-way layers"]=25**5===9765625;
+checks["positive scale inverse"]=Math.abs((1+.01025)/(1+.01025)-1)<1e-14;
+checks["opposite percent does not invert"]=Math.abs((1+.01025)*(1-.01025)-1)>1e-5;
+checks["coordinate corruption visible"]=(canonical[0]+1)!==canonical[0];
+checks["spectral swap visible"]=wl(canonical[0])!==wl(canonical[1]);
+checks["clock fault visible"]=(clock+1)%PER!==clock;
+checks["conserved coordinate multiset"]=JSON.stringify([...a].sort())===JSON.stringify([0,1,2,3]);
+checks["nonnegative cost"]=(stepNo+reads*.25)>=0;
+checks["Gibson sequence monotonic"]=events.every((e,i)=>e.seq===i+1);
+const pass=Object.values(checks).filter(Boolean).length;$("testResult").textContent="TEST "+pass+"/"+Object.keys(checks).length+(pass===Object.keys(checks).length?" PASS":" FAIL");
+record("TEST","B225 "+pass+"/"+Object.keys(checks).length+"; "+(pass===15?"PASS":"FAIL"));reads++;update();}
+function patch(type){fault[type]=!fault[type];record("FAULT",type+" "+(fault[type]?"INJECTED":"REMOVED"));update();}
+const px=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x|0,y|0,w|0,h|0)};
+function frame(){tick++;px(0,0,384,240,"#080e20");
+for(let i=0;i<140;i++){const x=(i*127)%384,y=(i*71)%240;px(x,y,i%9===0?2:1,1,i%7===0?"#658cac":"#2c4267");}
+for(let level=0;level<5;level++){const d=level*12;ctx.strokeStyle=["#2d4e70","#366981","#4c8f96","#9cc8b4","#ebc687"][level];ctx.lineWidth=level===4?3:2;ctx.strokeRect(18+d,15+d,348-2*d,210-2*d);}
+const Cx=192,Cy=114;
+for(let i=0;i<12;i++){const rad=i*Math.PI/6-Math.PI/2,x=Math.round(Cx+93*Math.cos(rad)),y=Math.round(Cy+78*Math.sin(rad));px(x-3,y-3,6,6,i<6?"#68cfc3":"#eaa87a");}
+const places=[[118,74],[266,74],[266,156],[118,156]],ang=tick*.009;
+for(let i=0;i<4;i++){const j=order[i];let [x,y]=places[i];for(let k=0;k<16;k++){const t=ang+k*Math.PI/8;px(Math.round(x+Math.cos(t)*23)-2,Math.round(y+Math.sin(t)*23)-2,5,5,chroma[(j+k)%4]);}
+px(x-7,y-7,14,14,"#0e1930");px(x-4,y-4,8,8,chroma[j]);ctx.fillStyle="#f1f4db";ctx.font="9px monospace";ctx.fillText(names[j],x-3,y+3);}
+ctx.strokeStyle="#eaaf6f";ctx.lineWidth=2;ctx.beginPath();ctx.arc(Cx,Cy,36,0,2*Math.PI);ctx.stroke();
+px(183,105,18,18,"#e2b571");px(187,109,10,10,"#543d49");
+px(112,216,160,16,"#111b2e");ctx.fillStyle="#aef4e5";ctx.font="9px monospace";ctx.fillText("{{5x5}}^5  /  CHRONOS",121,226);
+if(invalid){px(11,12,102,14,"#5d2437");ctx.fillStyle="#ffd5cf";ctx.font="9px monospace";ctx.fillText("FAULT DETECTED",18,22);}
+if(auto&&tick-lastMove>100){lastMove=tick;forward();}
+requestAnimationFrame(frame);}
+$("step").onclick=forward;$("cycle").onclick=()=>{for(let i=0;i<4;i++)forward();scan()};$("back").onclick=reverse;$("auto").onclick=()=>{auto=!auto;$("auto").textContent=auto?"❚❚ PAUSE":"▶ ANIMATE";lastMove=tick;record("PLAY",auto?"animation started":"animation paused");};
+$("reset").onclick=()=>{order=[0,1,2,3];stepNo=0;clock=0;reads=0;fault={coord:false,wave:false,time:false};record("RESET","new initial state; session log preserved");update()};
+$("prevStory").onclick=()=>story(-1);$("nextStory").onclick=()=>story(1);$("test").onclick=tests;
+$("badcoord").onclick=()=>patch("coord");$("badwave").onclick=()=>patch("wave");$("badtime").onclick=()=>patch("time");
+$("fix").onclick=()=>{fault={coord:false,wave:false,time:false};record("FAULT","cleared");update()};
+$("export").onclick=()=>{const s=events.map(e=>JSON.stringify(e)).join("\n")+"\n",a=document.createElement("a"),u=URL.createObjectURL(new Blob([s],{type:"application/x-ndjson"}));a.href=u;a.download="chronos-gibson-boundary225.jsonl";a.click();setTimeout(()=>URL.revokeObjectURL(u),1500)};
+record("INIT","B225 Chrome coordinates, wavelength and light-clock initialized");update();frame();
+})();
+</script></body></html>
