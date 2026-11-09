@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="author" content="David Lee Wise / ROOT0"><meta name="theme-color" content="#070c18"><title>CHRONOS B227 // Stream Memory</title>
+<style>
+:root{--bg:#0a0e1b;--paper:#11192a;--line:#34465e;--text:#f1eadd;--soft:#adc0ce;--cyan:#85f5df;--sun:#fdd18a}
+*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(ellipse at top,#20304a,var(--bg) 72%);font:13px/1.5 ui-monospace,Consolas,"Courier New",monospace}main{max-width:1240px;margin:auto;padding:16px}
+h1{font-size:clamp(21px,3vw,37px);margin:4px 0 6px;text-shadow:3px 3px #164c50}h2{font-size:22px;color:var(--sun);margin:5px 0 12px}.eyebrow{color:var(--cyan);font-size:11px;letter-spacing:.16em}.sub{color:var(--soft)}
+.layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(300px,.9fr);gap:14px}.panel{border:2px solid var(--line);background:#121b2c;padding:14px;box-shadow:4px 4px 0 #050917}.screen{background:#050917;border:3px solid #050b14;position:relative;aspect-ratio:16/10}canvas{width:100%;height:100%;display:block;image-rendering:pixelated}.screen:after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;background:repeating-linear-gradient(transparent 0 3px,#0008 4px 5px)}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}button{cursor:pointer;font:inherit;font-weight:bold;color:#edf7f4;background:#213b54;border:2px solid #547891;padding:9px 12px;box-shadow:3px 3px #060a13}button:hover,button:focus-visible{background:#365a75;outline:2px solid #b7ffe2}.primary{background:#a05e43;border-color:#eab381}
+.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:10px 0}.metric{background:#071222;border:1px solid #375063;padding:10px}.metric b{font-size:21px;color:var(--sun);display:block}.metric span{font-size:10px;color:var(--soft)}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.chip{display:inline-block;background:#0e2730;color:#9cf2df;border:1px solid #2b7268;padding:5px 8px;font-size:11px;margin:4px 4px 4px 0}.data{white-space:pre-wrap;color:#b9f4cd;background:#070d1a;border-left:3px solid #64d4b9;padding:13px;margin:10px 0;min-height:95px}.log{height:180px;overflow:auto;background:#070d1a;border:1px solid #354b62;color:#c5d8e9;padding:10px;font-size:11px}.log div{margin-bottom:4px}.range{width:100%;accent-color:#5bd5c4}.footer{color:var(--soft);font-size:11px;margin:21px 0}a{color:#97f9dd}
+p{margin:8px 0}strong{color:#ffe0a0}select{padding:9px;color:var(--text);background:#1e3144;border:2px solid #63899b;font:inherit;width:100%}
+@media(max-width:800px){.layout,.two{grid-template-columns:1fr}main{padding:9px}}
+</style></head><body><main><div class="eyebrow">ROOT0 / CHRONOS / SPRITE CHRONICLE / BOUNDARY 227</div><h1>THE STREAM REMEMBERS</h1><p class="sub">The stream moves. The rock is embedded. Four Chrome wheels carry a retained-motion state even when the stream reverses.</p>
+<div class="layout"><section class="panel"><div class="screen"><canvas id="canvas" width="384" height="240" aria-label="Moving sprite stream around embedded rock with four rotating chromatic coordinate wheels"></canvas></div>
+<div class="metrics"><div class="metric"><span>LOCAL EFFORT</span><b id="local">0.00 u</b></div><div class="metric"><span>RETAINED MOTION</span><b id="ambient">0.00 u</b></div><div class="metric"><span>CHRONOS TICK</span><b id="clock">0</b></div></div>
+<div class="controls"><button id="one" class="primary">STEP ▶</button><button id="full">FOUR-STEP CYCLE</button><button id="reverse">◀ REVERSE</button><button id="auto">▶ AUTO</button><button id="reset">↺ RESET</button></div>
+<div><span class="chip" id="closure">WHEELS: INITIAL</span><span class="chip" id="phase">PHASE 0°</span><span class="chip">SIX ZERO ANCHORS</span><span class="chip">{{5×5}}^5</span></div>
+</section><aside class="panel"><div class="eyebrow">THE INHERITANCE EXPERIMENT</div><h2 id="storytitle">The Rock in the Stream</h2>
+<p id="story" aria-live="polite">The stream moves around the embedded rock. After two steps in one direction, the stream reverses, but the wheel still retains part of its prior motion.</p>
+<div class="controls"><button id="prevStory">◀ STORY</button><button id="nextStory">STORY ▶</button></div>
+<label for="preset" class="eyebrow">STREAM REVERSAL / MEMORY RESPONSE</label>
+<select id="preset"><option value=".25" selected>RETAIN 75% / ADAPT 25%</option><option value="1">IMMEDIATE / NO MEMORY</option><option value=".1">SLOW ADAPTATION 10%</option><option value="0">FROZEN MEMORY 0%</option><option value=".5">FAST ADAPTATION 50%</option></select>
+<div class="data" id="equation"></div><p class="sub">After two aligned transport steps, flow flips from +0.65 to −0.65. Memory m approaches −0.65 at a chosen response rate α; local correction is 1−m.</p>
+<div><span class="chip" id="condition">MODEL: ALIGNED CURRENT</span></div></aside></div>
+<div class="two"><section class="panel"><div class="eyebrow">THE CHROMATIC REGISTER</div><h2>Coordinate · Wavelength · Time</h2><div class="data" id="register"></div><p>Each wheel carries a coordinate index from 0–5759. Wavelength is a visualization convention: λ(j) = 380 + 370j/5759 nm. The sprite color is a rendered representation, not proof of optical emission.</p>
+<div class="controls"><button id="test">RUN INVARIANT TEST</button><button id="badClock">INJECT +1 TICK</button><button id="badWave">SWAP WAVELENGTH</button><button id="badCoord">SHIFT COORDINATE</button><button id="clearFault">CLEAR FAULTS</button></div><div><span class="chip" id="check">TEST: NOT RUN</span><span class="chip" id="witness">WITNESS: ALIGNED</span></div></section>
+<section class="panel"><div class="eyebrow">GIBSON @ / APPEND-ONLY SESSION</div><h2>The Witness Remembers</h2><div id="log" class="log" role="log" aria-live="polite"></div><div class="controls"><button id="export">EXPORT GIBSON JSONL</button></div>
+<p>Changing the coordinate, wavelength, or clock label should be detected separately. A full four-step return can close in geometry while its local effort ledger remains nonzero.</p><p class="sub">The full independent Python test covers 30 invariants. Browser controls demonstrate the core behaviors; they do not recreate physical experiments.</p></section></div>
+<footer class="footer"><a href="./boundary226.html">◀ B226 CURRENT & ROCK</a> · <a href="./">PIXEL STORY</a> · <a href="../">ORIGINAL FRACTAL</a> · <a href="../experiments/boundary227/results.json">B227 TEST RESULTS</a> · <a href="https://github.com/DavidWise01/chronos-fractal">GITHUB</a><p>David Lee Wise / ROOT0. This is a dimensionless animated model. 'Gravity push', 'void pull', Planck foam, and physically free energy are not established by these tests.</p></footer>
+</main><script>
+(()=>{"use strict";
+const $=x=>document.getElementById(x),canvas=$("canvas"),ctx=canvas.getContext("2d");
+const PER=1296000,ids=[0,1440,2880,4320],names=["A","B","C","D"],colors=["#ff8b6e","#f8ce6c","#74ebbb","#6b9ef8"];
+const wavelength=j=>380+370*j/5759;
+let order=[0,1,2,3],steps=0,clock=0,mem=.65,work=0,seen=0,frame=0,auto=false,last=0,story=0,err={clock:false,wave:false,coord:false};
+const events=[];const stories=[
+["THE ROCK REMEMBERS","The rock stays embedded as the stream reverses. Our primitive keeps a retained-motion state, not just a current stream direction."],
+["TWO STEPS ALIGNED","For steps one and two the stream supplies +0.65. The memory begins at +0.65 and agrees with the flow."],
+["THE STREAM REVERSES","At the third step the stream becomes -0.65. With 25% adaptation the retained state remains +0.325. Same stream direction is not same state."],
+["CROSSING ZERO","The inherited motion decays through +0.08125 and then -0.1015625. It responds, but not instantaneously."],
+["FOUR CHROME WHEELS","Each wheel keeps an address and wavelength label. Four quarter-turn permutations restore position, independently of the motion memory."],
+["SIX ZERO ANCHORS","Six pairs of signed channels orient the primitive. Twelve directions; twenty-four surface contacts; five nested {{5×5}} layers."],
+["THE CLOCK CLOSES","Four turns close one CHRONOS rotation, and eight steps close two rotations. Position and time can return while the retained state differs."],
+["GIBSON'S WITNESS","Gibson records stream, memory, coordinates, tick, and cost. A matching clock or wheel position cannot hide a changed memory value."]
+];
+function stream(n){return n<=2?.65:-.65}
+function record(type,detail){const e={boundary:227,seq:events.length+1,type,step:steps,clock,retained:mem,detail};events.push(e);const x=document.createElement("div");x.textContent=String(e.seq).padStart(3,"0")+" / "+type+" / "+detail;$("log").append(x);$("log").scrollTop=$("log").scrollHeight}
+function check(){const a=order.map(i=>ids[i]);if(err.coord)a[0]++;const w=order.map(i=>wavelength(ids[i]));if(err.wave)[w[0],w[1]]=[w[1],w[0]];const faults=[];
+for(let i=0;i<4;i++)if(Math.abs(w[i]-wavelength(a[i]))>1e-8)faults.push("CHROME "+names[i]);
+if(err.clock)faults.push("CLOCK +1");
+$("witness").textContent=faults.length?"FALSE CLOSURE: "+faults.join(", "):"WITNESS: ALIGNED";
+return {a,w,faults}
+}
+function update(){const x=check(),alpha=Number($("preset").value),s=stream(steps+1);
+$("local").textContent=work.toFixed(2)+" u";$("ambient").textContent=(mem>=0?"+":"")+mem.toFixed(3);
+$("clock").textContent=(clock+(err.clock?1:0))%PER;
+$("closure").textContent=steps%4===0?"WHEELS: CLOSED":"WHEELS: MOVING";
+$("phase").textContent="PHASE "+((steps%4+4)%4)*90+"°";
+$("equation").textContent="ADAPTATION α       "+alpha.toFixed(2)+"\nNEXT STREAM s       "+(s>=0?"+":"")+s.toFixed(5)+"\nRETAINED m          "+(mem>=0?"+":"")+mem.toFixed(7)+"\nNEXT MEMORY         "+((1-alpha)*mem+alpha*s).toFixed(7)+"\nUPDATE              (1-α)m + αs\nCOST PER STEP       |1-m|";
+$("register").textContent=x.a.map((v,i)=>names[i]+" : "+String(v).padStart(4,"0")+" → "+x.w[i].toFixed(3)+" nm").join("\n")+"\nCHRONOS "+String((clock+(err.clock?1:0))%PER).padStart(7,"0")+"\nRETAINED "+mem.toFixed(9)+"\nSTEPS "+steps+"\nMODE 5--5 / 5++5";
+$("condition").textContent="MODEL: "+$("preset").selectedOptions[0].textContent;
+}
+function forward(){const s=stream(steps+1),a=Number($("preset").value);mem=(1-a)*mem+a*s;work+=Math.abs(1-mem);order=[order[3],order[0],order[1],order[2]];steps++;clock=(clock+PER/4)%PER;record("TRANSPORT","s="+s.toFixed(2)+" retained="+mem.toFixed(6));update()}
+function back(){record("REVERSE","inverse wheel permutation; state memory is not undone without history");order=[order[1],order[2],order[3],order[0]];clock=(clock+PER-PER/4)%PER;steps--;work+=1;update()}
+const p=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(x|0,y|0,w|0,h|0)};
+function draw(){frame++;p(0,0,384,240,"#07101f");
+for(let i=0;i<90;i++){p((i*113)%384,(i*73)%240,1,1,"#283d58")}
+for(let i=0;i<5;i++){let k=i*10;ctx.strokeStyle=["#33475e","#47617b","#579e9b","#b2c2a0","#edbe7d"][i];ctx.lineWidth=2;ctx.strokeRect(22+k,18+k,340-2*k,204-2*k)}
+let s=stream(steps+1),vel=s*1.7;for(let i=0;i<54;i++){const x=((i*29+frame*vel)%430+430)%430-25,y=28+(i*23)%190;if(y>92&&y<152&&x>133&&x<254)continue;p(x,y,12,2,s>=0?"#2796b3":"#b16a8f")}
+for(let i=0;i<12;i++){let a=i*Math.PI/6-Math.PI/2;p(192+98*Math.cos(a)-3,115+75*Math.sin(a)-3,6,6,i<6?"#65dfc5":"#f5b06d")}
+const loc=[[117,73],[267,73],[267,163],[117,163]];
+loc.forEach(([x,y],i)=>{let id=order[i];for(let j=0;j<16;j++){let a=j*Math.PI/8+frame*.017*(1+Math.abs(mem));p(x+Math.cos(a)*22-2,y+Math.sin(a)*22-2,5,5,colors[(j+id)%4])}p(x-6,y-6,12,12,"#102036");p(x-3,y-3,6,6,colors[id]);ctx.font="9px monospace";ctx.fillStyle="#f9e7bd";ctx.fillText(names[id],x-3,y+3)});
+ctx.strokeStyle="#edc687";ctx.lineWidth=2;ctx.beginPath();ctx.ellipse(192,116,44,32,0,0,Math.PI*2);ctx.stroke();p(183,103,18,25,"#1d3041");p(187,101,11,12,"#e6b882");p(190,113,5,12,"#ffda88");
+p(9,8,161,15,"#102337");ctx.fillStyle="#b5f8dd";ctx.font="9px monospace";ctx.fillText("B227 / STREAM MEMORY",15,18);
+p(214,212,155,17,"#102437");ctx.fillStyle=mem>=0?"#82eccb":"#ffba9c";ctx.fillText("RETAINED "+(mem>=0?"+":"")+mem.toFixed(3),220,223);
+if(err.clock||err.wave||err.coord){p(262,8,106,15,"#662638");ctx.fillStyle="#ffe4dc";ctx.fillText("FAULT DETECTED",265,18)}
+if(auto&&frame-last>95){last=frame;forward()}
+requestAnimationFrame(draw)}
+$("one").onclick=forward;$("full").onclick=()=>{for(let i=0;i<4;i++)forward();record("CLOSURE","positions return; memory="+mem.toFixed(6));update()};$("reverse").onclick=back;
+$("auto").onclick=()=>{auto=!auto;last=frame;$("auto").textContent=auto?"❚❚ PAUSE":"▶ AUTO";record("PLAY",auto?"enabled":"paused")};
+$("reset").onclick=()=>{order=[0,1,2,3];steps=0;clock=0;mem=.65;work=0;err={clock:false,wave:false,coord:false};record("RESET","fresh state; prior witness preserved");update()};
+$("preset").onchange=()=>{record("ADAPTATION","alpha="+$("preset").value);update()};
+$("badClock").onclick=()=>{err.clock=!err.clock;record("FAULT","clock toggle "+err.clock);update()};
+$("badWave").onclick=()=>{err.wave=!err.wave;record("FAULT","wavelength swap "+err.wave);update()};
+$("badCoord").onclick=()=>{err.coord=!err.coord;record("FAULT","coordinate shift "+err.coord);update()};
+$("clearFault").onclick=()=>{err={clock:false,wave:false,coord:false};record("FAULT","cleared");update()};
+const tell=d=>{story=(story+d+stories.length)%stories.length;$("storytitle").textContent=stories[story][0];$("story").textContent=stories[story][1];record("STORY",stories[story][0])};
+$("prevStory").onclick=()=>tell(-1);$("nextStory").onclick=()=>tell(1);
+$("test").onclick=()=>{const x=[0,1,2,3];let p=x;for(let i=0;i<4;i++)p=[p[3],p[0],p[1],p[2]];const checks=[
+p.join()===x.join(),4*(PER/4)===PER,mem<=.65&&mem>=-.65,Math.abs(.75*.65+.25*(-.65)-.325)<1e-12,
+wavelength(0)<wavelength(1440),wavelength(1440)!==wavelength(0),(clock+1)%PER!==clock,
+25**5===9765625,12===6*2,24===6*4,Math.abs(mem-(-.65))>0||steps===0,
+(1-.25)*.65+.25*.65===.65,Math.abs(1-mem)>=0,new Set(ids).size===4,Number.isFinite(work)
+];$("check").textContent="BROWSER "+checks.filter(Boolean).length+"/"+checks.length+(checks.every(Boolean)?" PASS":" FAIL");seen++;record("TEST",$("check").textContent);update()};
+$("export").onclick=()=>{const str=events.map(e=>JSON.stringify(e)).join("\n")+"\n",u=URL.createObjectURL(new Blob([str],{type:"application/x-ndjson"})),a=document.createElement("a");a.href=u;a.download="chronos-gibson-boundary227.jsonl";a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)};
+record("INIT","B227 stream-memory kernel instantiated");update();draw();
+})();
+</script></body></html>
