@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09101c"><title>CHRONOS 232 · The Foam Window</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09101c"><title>CHRONOS 233 · The Foam Window</title>
 <style>
 *{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% 0,#263956,#090d19 75%);color:#ecf4eb;font:13px/1.5 ui-monospace,Consolas,monospace}
 main{max-width:1230px;margin:auto;padding:15px}h1{font-size:clamp(24px,3.5vw,38px);margin:5px 0;color:#ffdc89;text-shadow:3px 3px #593947}h2{color:#ffda8d;margin:6px 0 12px}.eyebrow{color:#9cf8dc;letter-spacing:.15em;font-size:11px}
@@ -40,7 +40,7 @@ const stories=[
 ["Gibson Witness","This is a toy adaptation-rate perturbation, not measured Planck foam. Preserve coordinates, wavelengths, phase, memory and mode in the log."]
 ];
 function gate(a){let effective=a*(1+foam);let k=0,g=G;while(g>TOL&&k<10000){k++;g*=1-effective}return {memory:k,joint:4*Math.ceil(k/4),gap:g,effective}}
-function log(type,detail){const e={boundary:232,seq:events.length+1,type,step,alpha,foam,tick:step*Q,memory:m,detail};events.push(e);let d=document.createElement("div");d.textContent=String(e.seq).padStart(3,"0")+" / "+type+" / "+detail;$("ledger").append(d);$("ledger").scrollTop=$("ledger").scrollHeight}
+function log(type,detail){const e={boundary:233,seq:events.length+1,type,step,alpha,foam,tick:step*Q,memory:m,detail};events.push(e);let d=document.createElement("div");d.textContent=String(e.seq).padStart(3,"0")+" / "+type+" / "+detail;$("ledger").append(d);$("ledger").scrollTop=$("ledger").scrollHeight}
 function shown(){let coords=order.map(i=>BASE[i]);if(errors.coord)coords[0]=(coords[0]+1)%5760;let waves=order.map(i=>lambda(BASE[i]));if(errors.wave)[waves[0],waves[1]]=[waves[1],waves[0]];let broken=[];coords.forEach((j,i)=>{if(Math.abs(lambda(j)-waves[i])>1e-8)broken.push("CHROME "+i)});if(errors.clock)broken.push("CLOCK +1");return {coords,waves,broken}}
 function update(){const q=gate(alpha),s=shown(),gap=Math.abs(.65-m),aligned=q.memory===4,lower=LOWER/(1+foam),upper=UPPER/(1+foam);
 $("memoryStep").textContent=q.memory;$("jointStep").textContent=q.joint;$("waitStep").textContent=q.joint-q.memory;
