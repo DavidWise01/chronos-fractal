@@ -1,0 +1,504 @@
+{
+  "boundary": 239,
+  "date": "2026-11-09",
+  "status": "PASS",
+  "checks_passed": 75,
+  "checks_total": 75,
+  "model": "g[n+1]=g[n]*(1-alpha[n]); same initial four slow-rate steps; correction at step five only",
+  "initial_gap": 0.10698345713317403,
+  "threshold": 0.001,
+  "disturbed_rate": 0.4,
+  "corrected_rate": 0.7387707922453981,
+  "passive_history": [
+    {
+      "step": 1,
+      "alpha": 0.4,
+      "gap": 0.06419007427990442,
+      "within_tolerance": false,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "alpha": 0.4,
+      "gap": 0.03851404456794265,
+      "within_tolerance": false,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "alpha": 0.4,
+      "gap": 0.02310842674076559,
+      "within_tolerance": false,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "alpha": 0.4,
+      "gap": 0.013865056044459353,
+      "within_tolerance": false,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": false
+    },
+    {
+      "step": 5,
+      "alpha": 0.4,
+      "gap": 0.008319033626675612,
+      "within_tolerance": false,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "alpha": 0.4,
+      "gap": 0.004991420176005367,
+      "within_tolerance": false,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "alpha": 0.4,
+      "gap": 0.0029948521056032203,
+      "within_tolerance": false,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "alpha": 0.4,
+      "gap": 0.001796911263361932,
+      "within_tolerance": false,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": false
+    },
+    {
+      "step": 9,
+      "alpha": 0.4,
+      "gap": 0.0010781467580171591,
+      "within_tolerance": false,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "alpha": 0.4,
+      "gap": 0.0006468880548102955,
+      "within_tolerance": true,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "alpha": 0.4,
+      "gap": 0.0003881328328861773,
+      "within_tolerance": true,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "alpha": 0.4,
+      "gap": 0.00023287969973170638,
+      "within_tolerance": true,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": true
+    },
+    {
+      "step": 13,
+      "alpha": 0.4,
+      "gap": 0.00013972781983902382,
+      "within_tolerance": true,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 14,
+      "alpha": 0.4,
+      "gap": 0.00008383669190341428,
+      "within_tolerance": true,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 15,
+      "alpha": 0.4,
+      "gap": 0.00005030201514204857,
+      "within_tolerance": true,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 16,
+      "alpha": 0.4,
+      "gap": 0.000030181209085229143,
+      "within_tolerance": true,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": true
+    }
+  ],
+  "corrected_history": [
+    {
+      "step": 1,
+      "alpha": 0.4,
+      "gap": 0.06419007427990442,
+      "within_tolerance": false,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 2,
+      "alpha": 0.4,
+      "gap": 0.03851404456794265,
+      "within_tolerance": false,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 3,
+      "alpha": 0.4,
+      "gap": 0.02310842674076559,
+      "within_tolerance": false,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 4,
+      "alpha": 0.4,
+      "gap": 0.013865056044459353,
+      "within_tolerance": false,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": false
+    },
+    {
+      "step": 5,
+      "alpha": 0.7387707922453981,
+      "gap": 0.0036219576059672715,
+      "within_tolerance": false,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 6,
+      "alpha": 0.7387707922453981,
+      "gap": 0.0009461611159275849,
+      "within_tolerance": true,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 7,
+      "alpha": 0.7387707922453981,
+      "gap": 0.00024716491872197303,
+      "within_tolerance": true,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 8,
+      "alpha": 0.7387707922453981,
+      "gap": 0.00006456669590247158,
+      "within_tolerance": true,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": true
+    },
+    {
+      "step": 9,
+      "alpha": 0.7387707922453981,
+      "gap": 0.000016866706817934952,
+      "within_tolerance": true,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 10,
+      "alpha": 0.7387707922453981,
+      "gap": 0.00000440607645947829,
+      "within_tolerance": true,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 11,
+      "alpha": 0.7387707922453981,
+      "gap": 0.000001150995862815715,
+      "within_tolerance": true,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 12,
+      "alpha": 0.7387707922453981,
+      "gap": 3.006737373721737e-7,
+      "within_tolerance": true,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": true
+    },
+    {
+      "step": 13,
+      "alpha": 0.7387707922453981,
+      "gap": 7.854476220634817e-8,
+      "within_tolerance": true,
+      "phase": 1,
+      "wheels": [
+        3,
+        0,
+        1,
+        2
+      ],
+      "clock": 324000,
+      "full_return": false
+    },
+    {
+      "step": 14,
+      "alpha": 0.7387707922453981,
+      "gap": 2.0518186004437932e-8,
+      "within_tolerance": true,
+      "phase": 2,
+      "wheels": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "clock": 648000,
+      "full_return": false
+    },
+    {
+      "step": 15,
+      "alpha": 0.7387707922453981,
+      "gap": 5.359949474500881e-9,
+      "within_tolerance": true,
+      "phase": 3,
+      "wheels": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "clock": 972000,
+      "full_return": false
+    },
+    {
+      "step": 16,
+      "alpha": 0.7387707922453981,
+      "gap": 1.40017535482856e-9,
+      "within_tolerance": true,
+      "phase": 0,
+      "wheels": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "clock": 0,
+      "full_return": true
+    }
+  ],
+  "memory_step_passive": 10,
+  "memory_step_corrected": 6,
+  "first_full_step_passive": 12,
+  "first_full_step_corrected": 8,
+  "passive_step8_gap": 0.001796911263361932,
+  "corrected_step8_gap": 0.00006456669590247158,
+  "chronos_ticks_saved": 1296000,
+  "scope": "Toy discrete relaxation and cyclic phase gate, not a measured physical phenomenon."
+}
