@@ -1,0 +1,62 @@
+{
+  "boundary": 226,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 30,
+  "checks_total": 30,
+  "model": "quarter turn = 1; stream fraction = s; local correction = 1-s; local effort = Σ|correction|; external stream magnitude = Σ|s|",
+  "cases": [
+    {
+      "name": "still",
+      "s": 0,
+      "local_effort": 4,
+      "external": 0,
+      "closed": true
+    },
+    {
+      "name": "aligned",
+      "s": 0.65,
+      "local_effort": 1.4,
+      "external": 2.6,
+      "closed": true
+    },
+    {
+      "name": "opposing",
+      "s": -0.35,
+      "local_effort": 5.4,
+      "external": 1.4,
+      "closed": true
+    },
+    {
+      "name": "overdrive",
+      "s": 1.25,
+      "local_effort": 1,
+      "external": 5,
+      "closed": true
+    },
+    {
+      "name": "foam_plus",
+      "s": 0.6566625,
+      "local_effort": 1.37335,
+      "external": 2.62665,
+      "closed": true
+    },
+    {
+      "name": "foam_minus",
+      "s": 0.6433375,
+      "local_effort": 1.42665,
+      "external": 2.57335,
+      "closed": true
+    }
+  ],
+  "primitive": {
+    "chrome_wheels": 4,
+    "addresses_per_wheel": 5760,
+    "levels": 5,
+    "zero_anchors": 6,
+    "signed_channels": 12,
+    "contacts": 24,
+    "chronos_ticks_per_rotation": 1296000
+  },
+  "limits": "Mathematical model of inherited rotational motion; external flow contributes to motion, so reduced local effort is not free energy. Physical Planck foam and gravity/void hypotheses not evaluated."
+}
