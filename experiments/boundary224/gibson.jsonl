@@ -1,0 +1,7 @@
+{"seq":1,"boundary":224,"type":"baseline","outcome":"match","note":"all four coordinates, wavelengths, Chronos tick, five-level address and mode match"}
+{"seq":2,"boundary":224,"type":"wavelength_swap","outcome":"detected","note":"labels swapped while coordinates are unchanged"}
+{"seq":3,"boundary":224,"type":"clock_shift","outcome":"detected","note":"tick +1, labels/coordinates match"}
+{"seq":4,"boundary":224,"type":"coordinate_shift","outcome":"detected","note":"first wheel address +1"}
+{"seq":5,"boundary":224,"type":"mode_change","outcome":"detected","note":"contraction replaced by expansion"}
+{"seq":6,"boundary":224,"type":"address_shift","outcome":"detected","note":"level-zero recursive address +1"}
+{"seq":7,"boundary":224,"type":"recovered","outcome":"match","note":"fresh model restores baseline"}
