@@ -1,0 +1,40 @@
+{
+  "boundary": 227,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "passed": 30,
+  "total": 30,
+  "model": "m_next=(1-alpha)*m+alpha*stream",
+  "alpha": 0.25,
+  "stream": [
+    0.65,
+    0.65,
+    -0.65,
+    -0.65,
+    -0.65,
+    -0.65,
+    -0.65,
+    -0.65
+  ],
+  "memory": [
+    0.65,
+    0.65,
+    0.325,
+    0.08125,
+    -0.1015625,
+    -0.238671875,
+    -0.34150390625,
+    -0.4186279296875
+  ],
+  "clock_after_eight": 0,
+  "wheels_after_eight": [
+    0,
+    1440,
+    2880,
+    4320
+  ],
+  "retained_final": -0.4186279296875,
+  "local_effort": 7.394116210937501,
+  "memoryless_local_effort": 10.6,
+  "interpretation": "coordinates and clock close, retained memory not restored; model is not physical inertia"
+}
