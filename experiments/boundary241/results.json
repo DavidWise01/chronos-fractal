@@ -1,0 +1,1087 @@
+{
+  "boundary": 241,
+  "date": "2026-11-09",
+  "status": "PASS",
+  "checks_passed": 96,
+  "checks_total": 96,
+  "initial_gap": 0.10698345713317403,
+  "step4_gap": 0.013865056044459353,
+  "tolerance": 0.001,
+  "disturbed_rate": 0.4,
+  "additive_error_bound": 0.005,
+  "multiplicative_foam_bound": 0.01025,
+  "minimum_unprotected_rate": 0.4817735293824935,
+  "mathematical_robust_command": 0.49176284858044306,
+  "implementation_guard": 1e-10,
+  "guarded_command": 0.49176284868044307,
+  "worst_effective_rate": 0.4817735294814685,
+  "worst_step8_gap": 0.000999999999236049,
+  "baseline_step8_gap": 0.0009250969770530632,
+  "best_step8_gap": 0.000853779828370613,
+  "scenarios": [
+    {
+      "name": "worst_corner",
+      "command": 0.49176284868044307,
+      "error": -0.005,
+      "foam": -0.01025,
+      "effective_poststep4": 0.4817735294814685,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.4817735294814685,
+          "gap": 0.007185239057461803,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.4817735294814685,
+          "gap": 0.0037235810765803303,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.4817735294814685,
+          "gap": 0.0019296582790058186,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.4817735294814685,
+          "gap": 0.000999999999236049,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        },
+        {
+          "step": 9,
+          "alpha": 0.4817735294814685,
+          "gap": 0.0005182264701226319,
+          "ready": true,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.4817735294814685,
+          "gap": 0.00026855867454092877,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.4817735294814685,
+          "gap": 0.00013917421403448053,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.4817735294814685,
+          "gap": 0.00007212376172627952,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    },
+    {
+      "name": "best_corner",
+      "command": 0.49176284868044307,
+      "error": 0.005,
+      "foam": 0.01025,
+      "effective_poststep4": 0.5018546678794177,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.5018546678794177,
+          "gap": 0.006906812948137692,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.5018546678794177,
+          "gap": 0.003440596629944789,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.5018546678794177,
+          "gap": 0.001713917150916803,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.5018546678794177,
+          "gap": 0.000853779828370613,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        },
+        {
+          "step": 9,
+          "alpha": 0.5018546678794177,
+          "gap": 0.0004253064361615328,
+          "ready": true,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.5018546678794177,
+          "gap": 0.000211864415894708,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.5018546678794177,
+          "gap": 0.00010553926982040249,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.5018546678794177,
+          "gap": 0.00005257389461644815,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    },
+    {
+      "name": "center",
+      "command": 0.49176284868044307,
+      "error": 0,
+      "foam": 0,
+      "effective_poststep4": 0.49176284868044307,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.49176284868044307,
+          "gap": 0.007046736586922026,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.49176284868044307,
+          "gap": 0.003581413329036548,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.49176284868044307,
+          "gap": 0.0018202073080474262,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.49176284868044307,
+          "gap": 0.0009250969770530632,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        },
+        {
+          "step": 9,
+          "alpha": 0.49176284868044307,
+          "gap": 0.00047016865231178236,
+          "ready": true,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.49176284868044307,
+          "gap": 0.0002389571764906955,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.49176284868044307,
+          "gap": 0.00012144691466699568,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.49176284868044307,
+          "gap": 0.0000617238339469032,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    },
+    {
+      "name": "below_robust_minimum",
+      "command": 0.4917618485804431,
+      "error": -0.005,
+      "foam": -0.01025,
+      "effective_poststep4": 0.48177253963249356,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.48177253963249356,
+          "gap": 0.007185252781773315,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.48177253963249356,
+          "gap": 0.003723595301196946,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.48177253963249356,
+          "gap": 0.0019296693363756736,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.48177253963249356,
+          "gap": 0.0010000076395390168,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 9,
+          "alpha": 0.48177253963249356,
+          "gap": 0.0005182314193864095,
+          "ready": true,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.48177253963249356,
+          "gap": 0.0002685617523512671,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.48177253963249356,
+          "gap": 0.00013917607487284436,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.48177253963249356,
+          "gap": 0.00007212486382527206,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    },
+    {
+      "name": "unprotected_B240_minimum",
+      "command": 0.4817735293834935,
+      "error": -0.005,
+      "foam": -0.01025,
+      "effective_poststep4": 0.4718866007073127,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.4718866007073127,
+          "gap": 0.00732232187902305,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.4718866007073127,
+          "gap": 0.0038670162982460806,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.4718866007073127,
+          "gap": 0.002042223122386962,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.4718866007073127,
+          "gap": 0.0010785253952779043,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 9,
+          "alpha": 0.4718866007073127,
+          "gap": 0.0005695837127237032,
+          "ready": true,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.4718866007073127,
+          "gap": 0.0003008047907082644,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.4718866007073127,
+          "gap": 0.00015885904054446686,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.4718866007073127,
+          "gap": 0.00008389558791031323,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    },
+    {
+      "name": "passive",
+      "command": 0.4,
+      "error": 0,
+      "foam": 0,
+      "effective_poststep4": 0.4,
+      "trajectory": [
+        {
+          "step": 1,
+          "alpha": 0.4,
+          "gap": 0.06419007427990442,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 2,
+          "alpha": 0.4,
+          "gap": 0.03851404456794265,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 3,
+          "alpha": 0.4,
+          "gap": 0.02310842674076559,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 4,
+          "alpha": 0.4,
+          "gap": 0.013865056044459353,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 5,
+          "alpha": 0.4,
+          "gap": 0.008319033626675612,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 6,
+          "alpha": 0.4,
+          "gap": 0.004991420176005367,
+          "ready": false,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 7,
+          "alpha": 0.4,
+          "gap": 0.0029948521056032203,
+          "ready": false,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 8,
+          "alpha": 0.4,
+          "gap": 0.001796911263361932,
+          "ready": false,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": false
+        },
+        {
+          "step": 9,
+          "alpha": 0.4,
+          "gap": 0.0010781467580171591,
+          "ready": false,
+          "clock": 324000,
+          "wheels": [
+            3,
+            0,
+            1,
+            2
+          ],
+          "full": false
+        },
+        {
+          "step": 10,
+          "alpha": 0.4,
+          "gap": 0.0006468880548102955,
+          "ready": true,
+          "clock": 648000,
+          "wheels": [
+            2,
+            3,
+            0,
+            1
+          ],
+          "full": false
+        },
+        {
+          "step": 11,
+          "alpha": 0.4,
+          "gap": 0.0003881328328861773,
+          "ready": true,
+          "clock": 972000,
+          "wheels": [
+            1,
+            2,
+            3,
+            0
+          ],
+          "full": false
+        },
+        {
+          "step": 12,
+          "alpha": 0.4,
+          "gap": 0.00023287969973170638,
+          "ready": true,
+          "clock": 0,
+          "wheels": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "full": true
+        }
+      ]
+    }
+  ],
+  "interpretation": "Guaranteed first full step-eight return for every additive error in ±0.005 and multiplicative modulation in ±0.01025 at fixed poststep-four command, since gap decreases monotonically as effective alpha increases.",
+  "limitation": "A synthetic bounded uncertainty model, not measured environmental foam or physical dynamics."
+}
