@@ -1,0 +1,47 @@
+{
+  "boundary": 234,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 63,
+  "checks_total": 63,
+  "initial_gap": 0.10698345713317403,
+  "threshold": 0.001,
+  "perturbation": 0.01025,
+  "robust_core": {
+    "lower_inclusive": 0.6962001693654924,
+    "upper_exclusive": 0.7813414151253036,
+    "width_percentage_points": 8.51412457598112,
+    "limiting_lower": "negative_foam",
+    "limiting_upper": "positive_foam"
+  },
+  "modes": [
+    {
+      "modulation": -0.01025,
+      "lower": 0.6962001693654924,
+      "upper": 0.797524793766444,
+      "nominal_75_effective": 0.7423125,
+      "nominal_75_gap": 0.00047172624182967787,
+      "memory_gate_at_75": 4,
+      "clock_gate_at_75": 4
+    },
+    {
+      "modulation": 0,
+      "lower": 0.6890641176294962,
+      "upper": 0.789350164630338,
+      "nominal_75_effective": 0.75,
+      "nominal_75_gap": 0.00041790412942646106,
+      "memory_gate_at_75": 4,
+      "clock_gate_at_75": 4
+    },
+    {
+      "modulation": 0.01025,
+      "lower": 0.6820728707047722,
+      "upper": 0.7813414151253036,
+      "nominal_75_effective": 0.7576875000000001,
+      "nominal_75_gap": 0.00036882461799031665,
+      "memory_gate_at_75": 4,
+      "clock_gate_at_75": 4
+    }
+  ],
+  "note": "Robust first-crossing step-four alignment for all three modes and, by monotonic effective-rate bounds, every modulation between -1.025% and +1.025%. This is a dimensionless toy model."
+}
