@@ -1,0 +1,59 @@
+{
+  "boundary": 242,
+  "date": "2026-11-09",
+  "checks_passed": 99,
+  "checks_total": 99,
+  "threshold": 0.001,
+  "step4_gap": 0.013865056044459353,
+  "minimum": 0.4817735293824935,
+  "guard": 1e-10,
+  "formula": "minimum/(1-f)+j+guard",
+  "profiles": [
+    {
+      "name": "clear",
+      "j": 0,
+      "f": 0,
+      "command": 0.4817735294824935,
+      "worst": 0.4817735294824935,
+      "step8_gap": 0.000999999999228137,
+      "step8_return": 8
+    },
+    {
+      "name": "mild",
+      "j": 0.0025,
+      "f": 0.005,
+      "command": 0.4866945019919533,
+      "worst": 0.48177352948199353,
+      "step8_gap": 0.0009999999992319959,
+      "step8_return": 8
+    },
+    {
+      "name": "reference",
+      "j": 0.005,
+      "f": 0.01025,
+      "command": 0.49176284868044307,
+      "worst": 0.4817735294814685,
+      "step8_gap": 0.000999999999236049,
+      "step8_return": 8
+    },
+    {
+      "name": "wide",
+      "j": 0.01,
+      "f": 0.02,
+      "command": 0.5016056423270342,
+      "worst": 0.4817735294804935,
+      "step8_gap": 0.0009999999992435747,
+      "step8_return": 8
+    },
+    {
+      "name": "severe",
+      "j": 0.02,
+      "f": 0.03,
+      "command": 0.5166737417314367,
+      "worst": 0.48177352947949353,
+      "step8_gap": 0.0009999999992512925,
+      "step8_return": 8
+    }
+  ],
+  "limitations": "Bounded discrete simulation using supplied input uncertainties."
+}
