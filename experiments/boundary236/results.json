@@ -1,0 +1,83 @@
+{
+  "boundary": 236,
+  "date": "2026-11-08",
+  "status": "PASS",
+  "checks_passed": 77,
+  "checks_total": 77,
+  "model": {
+    "memory_update": "m[n+1]=(1-alpha_effective)*m[n]+alpha_effective*0.65",
+    "effective_rate": "alpha_effective=(alpha_center+nominal_error)*(1+foam_delta)",
+    "initial_gap": 0.10698345713317403,
+    "memory_tolerance": 0.001,
+    "existing_foam_band": 0.01025,
+    "reference_nominal_rate": 0.7387707922453981,
+    "nominal_error_absolute_bound": 0.042570622879905595
+  },
+  "closed_form": {
+    "effective_lower_inclusive": 0.6890641176294962,
+    "effective_upper_exclusive": 0.789350164630338,
+    "nominal_core_lower": 0.6962001693654924,
+    "nominal_core_upper_exclusive": 0.7813414151253036,
+    "additional_foam_bound": "F(J)=min(1-E-L/(C-J), U/(C+J)-1-E)",
+    "important": "The upper constraint is strict; when upper edge is active, F is a supremum rather than an included maximum."
+  },
+  "budgets": [
+    {
+      "nominal_rate_error": 0,
+      "lower_edge_foam_limit": 0.05703294504554646,
+      "upper_edge_foam_limit_exclusive": 0.05821422857515866,
+      "maximum_additional_foam": 0.05703294504554646,
+      "limiting_side": "lower",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.005,
+      "lower_edge_foam_limit": 0.05067730194274411,
+      "upper_edge_foam_limit_exclusive": 0.0510314765787435,
+      "maximum_additional_foam": 0.05067730194274411,
+      "limiting_side": "lower",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.01,
+      "lower_edge_foam_limit": 0.04423444838680024,
+      "upper_edge_foam_limit_exclusive": 0.0439446518283003,
+      "maximum_additional_foam": 0.0439446518283003,
+      "limiting_side": "upper",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.02,
+      "lower_edge_foam_limit": 0.031079829949127502,
+      "upper_edge_foam_limit_exclusive": 0.030051198593118757,
+      "maximum_additional_foam": 0.030051198593118757,
+      "limiting_side": "upper",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.03,
+      "lower_edge_foam_limit": 0.01755401623699937,
+      "upper_edge_foam_limit_exclusive": 0.01651919127589694,
+      "maximum_additional_foam": 0.01651919127589694,
+      "limiting_side": "upper",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.04,
+      "lower_edge_foam_limit": 0.0036410708970976424,
+      "upper_edge_foam_limit_exclusive": 0.0033347061680842702,
+      "maximum_additional_foam": 0.0033347061680842702,
+      "limiting_side": "upper",
+      "joint_gate_step": 4
+    },
+    {
+      "nominal_rate_error": 0.042570622879905595,
+      "lower_edge_foam_limit": 0,
+      "upper_edge_foam_limit_exclusive": -1.3010426069826053e-16,
+      "maximum_additional_foam": -1.3010426069826053e-16,
+      "limiting_side": "upper",
+      "joint_gate_step": 4
+    }
+  ],
+  "scope": "Arithmetic model of simultaneous two-parameter uncertainty, not a measured physical foam or quantum effect."
+}
