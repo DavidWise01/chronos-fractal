@@ -1,0 +1,8 @@
+{"boundary":240,"seq":1,"event":"failed_common_gate","step":4,"gap":0.013865056044459353,"rate":0.4}
+{"boundary":240,"seq":2,"event":"analytical_minimum_derived","alpha":0.4817735293824935,"formula":"1-(0.001/gap_step4)^(1/4)","upper_clock_step":8}
+{"boundary":240,"seq":3,"event":"float_guard_selected","alpha":0.4817735293834935,"guard":9.999778782798785e-13}
+{"boundary":240,"seq":4,"event":"below_threshold_misses","rate":0.48177252938249354,"step":8,"gap":0.0010000077186554626,"accepted":false}
+{"boundary":240,"seq":5,"event":"minimal_correction_succeeds","rate":0.4817735293834935,"step":8,"gap":0.0009999999999922818,"accepted":true}
+{"boundary":240,"seq":6,"event":"full_correction_also_succeeds","rate":0.7387707922453981,"step":8,"gap":0.00006456669590247158,"accepted":true}
+{"boundary":240,"seq":7,"event":"observation_waits","rate":0.4,"step":12,"gap":0.00023287969973170638,"accepted":true}
+{"boundary":240,"seq":8,"event":"one_cycle_saved","steps":4,"ticks":1296000,"reset":false}
