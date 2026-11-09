@@ -1,0 +1,14 @@
+{"boundary":244,"seq":1,"event":"baseline_calibration","j":0.005,"f":0.01,"command":0.4916399287691854,"count":6}
+{"boundary":244,"seq":2,"event":"packet_admission_decision","id":"h04","status":"ADMIT","reasons":[],"calibration_changed":true}
+{"boundary":244,"seq":3,"event":"packet_admission_decision","id":"h04-duplicate","status":"HOLD","reasons":["DUPLICATE"],"calibration_changed":false}
+{"boundary":244,"seq":4,"event":"packet_admission_decision","id":"h05-dependent","status":"HOLD","reasons":["DEPENDENT_LINEAGE"],"calibration_changed":false}
+{"boundary":244,"seq":5,"event":"packet_admission_decision","id":"h06-insufficient","status":"HOLD","reasons":["WITNESSES_INSUFFICIENT","DEPENDENT_LINEAGE","WITNESS_TIME_INVALID"],"calibration_changed":false}
+{"boundary":244,"seq":6,"event":"packet_admission_decision","id":"h07-stale","status":"HOLD","reasons":["STALE"],"calibration_changed":false}
+{"boundary":244,"seq":7,"event":"packet_admission_decision","id":"h08-no-source","status":"HOLD","reasons":["SOURCE_MISSING"],"calibration_changed":false}
+{"boundary":244,"seq":8,"event":"packet_admission_decision","id":"h09-bad-witness","status":"HOLD","reasons":["WITNESS_INVALID_OR_REUSED"],"calibration_changed":false}
+{"boundary":244,"seq":9,"event":"packet_admission_decision","id":"h10-inside","status":"ADMIT","reasons":[],"calibration_changed":true}
+{"boundary":244,"seq":10,"event":"packet_admission_decision","id":"h11-future","status":"HOLD","reasons":["TIME_INVALID","WITNESS_TIME_INVALID"],"calibration_changed":false}
+{"boundary":244,"seq":11,"event":"packet_admission_decision","id":"h12-reused-witness","status":"HOLD","reasons":["WITNESS_INVALID_OR_REUSED","WITNESS_TIME_INVALID"],"calibration_changed":false}
+{"boundary":244,"seq":12,"event":"packet_admission_decision","id":"h13-nonfinite","status":"HOLD","reasons":["NONFINITE"],"calibration_changed":false}
+{"boundary":244,"seq":13,"event":"recalibration_from_admitted_only","j":0.008,"f":0.015,"command":0.4971101822142066,"count":8}
+{"boundary":244,"seq":14,"event":"replay_witness","packet":"h04","prior_pass":false,"new_pass":true,"reset_history":false}
